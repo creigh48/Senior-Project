@@ -20,26 +20,21 @@ public class Algo {
     //
     static final double modeCheck = 0.1;
 
-    public static void main(String[] args) {
-
+    static double r = 0.0;//r is set to exlpore immediately 
+    
+    public static void move() {
         boolean notDone = true;
-        double r = 0.0;//r is set to exlpore immediately 
-        
         currentCell = grid[xVal][yVal];//default starting cell 
-        
-        do {//Start loop
 
-            if (r < modeCheck) {
-                explore();
-            } else {
-                //Exploit -- Perform calculated action
-            }
+        if (r < modeCheck) {
+            explore();
+        } else {
+            exploit();
+        }
 
-            updateRobot();
-            updateGUI();
-            
-            r = random.nextDouble(); //find next mode
-        } while (notDone);
+        updateRobot();
+        updateGUI();
+        r = random.nextDouble(); //find next mode
     }
 
     /**
@@ -73,6 +68,8 @@ public class Algo {
      * Send the new position to the robot
      */
     private static void updateRobot() {
+        //use position information from currentCell
+        //to move the robot
     }
 
     /**
