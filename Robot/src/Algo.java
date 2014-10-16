@@ -44,25 +44,53 @@ public class Algo {
      */
     private static void explore() {
         boolean notFound = true;
-        
+        while(notFound) {
+            int choice = random.nextInt(2) + 1;
+            switch (choice) {
+                case 1: moveUp();
+                    break;
+                case 2: moveDown();
+                    break;
+                case 3: moveRight();
+                    break;
+                case 4: moveLeft();
+                    break;
+            }
+        }
     }
 
     /**
      * Makes the next move made by the robot exploitation
      */
     private static void exploit() {
-
+        
     }
 
     /**
-     * 
+     * Send the new position to the robot
      */
     private static void updateRobot() {
     }
 
     /**
-     * 
+     * Send the new information to the GUI
      */
-    private static void updateGUI() {
+    private static void updateGUI() {       
+    }
+    
+    private static void moveUp() {
+        
+    }
+    
+    private static void moveDown() {
+        
+    }
+    
+    private static void moveLeft() {
+        
+    }
+    
+    private static void moveRight() {
+        
     }
 }
