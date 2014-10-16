@@ -30,11 +30,14 @@ public class Algo {
         do {//Start loop
 
             if (r < modeCheck) {
-                //Explore -- Perform a random action
+                explore();
             } else {
                 //Exploit -- Perform calculated action
             }
 
+            updateRobot();
+            updateGUI();
+            
             r = random.nextDouble(); //find next mode
         } while (notDone);
     }
@@ -82,6 +85,9 @@ public class Algo {
         boolean success = false;
         if(yVal > 0) {
             yVal = yVal -1;
+            
+            prevCell = currentCell;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -91,6 +97,9 @@ public class Algo {
         boolean success = false;
         if(yVal < 5){
             yVal = yVal -1;
+                        
+            prevCell = currentCell;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -100,6 +109,9 @@ public class Algo {
         boolean success = false;
         if(xVal > 0) {
             xVal = xVal -1;
+                        
+            prevCell = currentCell;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -109,6 +121,9 @@ public class Algo {
         boolean success = false;
         if(xVal < 5) {
             xVal = xVal + 1;
+                        
+            prevCell = currentCell;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
