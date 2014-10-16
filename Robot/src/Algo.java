@@ -47,13 +47,13 @@ public class Algo {
         while(notFound) {
             int choice = random.nextInt(2) + 1;
             switch (choice) {
-                case 1: moveUp();
+                case 1: notFound = moveUp();
                     break;
-                case 2: moveDown();
+                case 2: notFound = moveDown();
                     break;
-                case 3: moveRight();
+                case 3: notFound = moveRight();
                     break;
-                case 4: moveLeft();
+                case 4: notFound = moveLeft();
                     break;
             }
         }
@@ -78,19 +78,39 @@ public class Algo {
     private static void updateGUI() {       
     }
     
-    private static void moveUp() {
-        
+    private static boolean moveUp() {
+        boolean success = false;
+        if(yVal > 0) {
+            yVal = yVal -1;
+            success = true;
+        }
+        return success;
     }
     
-    private static void moveDown() {
-        
+    private static boolean moveDown() {
+        boolean success = false;
+        if(yVal < 5){
+            yVal = yVal -1;
+            success = true;
+        }
+        return success;
     }
     
-    private static void moveLeft() {
-        
+    private static boolean moveLeft() {
+        boolean success = false;
+        if(xVal > 0) {
+            xVal = xVal -1;
+            success = true;
+        }
+        return success;
     }
     
-    private static void moveRight() {
-        
+    private static boolean moveRight() {
+        boolean success = false;
+        if(xVal < 5) {
+            xVal = xVal + 1;
+            success = true;
+        }
+        return success;
     }
 }
