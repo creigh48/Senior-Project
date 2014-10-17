@@ -17,10 +17,12 @@ public class Algo {
     static Cell[][] grid = new Cell[5][5];
     //Fill the grid with the correct cell information here
 
-    //
+   
+    //parameter to explore/exploit
     static final double modeCheck = 0.1;
 
-    static double r = 0.0;//r is set to exlpore immediately 
+    //r is set to exlpore immediately
+    static double r = 0.0; 
     
     public static void move() {
         boolean notDone = true;
@@ -81,7 +83,7 @@ public class Algo {
     private static boolean moveUp() {
         boolean success = false;
         if(yVal > 0) {
-            yVal = yVal -1;
+            yVal = yVal - 1;
             
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];
@@ -93,7 +95,7 @@ public class Algo {
     private static boolean moveDown() {
         boolean success = false;
         if(yVal < 5){
-            yVal = yVal -1;
+            yVal = yVal + 1;
                         
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];
@@ -105,7 +107,7 @@ public class Algo {
     private static boolean moveLeft() {
         boolean success = false;
         if(xVal > 0) {
-            xVal = xVal -1;
+            xVal = xVal - 1;
                         
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];

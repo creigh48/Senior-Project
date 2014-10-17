@@ -10,8 +10,9 @@ public class Cell {
     private int armRot;
     private int rakeRot;
 
-    public Cell() {
-
+    public Cell(int arm, int rake) {
+        this.armRot = arm;
+        this.rakeRot = rake;
     }
 
     public void setGoodness(int i) {
