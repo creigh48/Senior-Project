@@ -14,7 +14,9 @@ public class Algo {
     private static int xVal = 0;
     private static int yVal = 0;
     
-    static Cell[][] grid = new Cell[5][5];
+    private static final int n = 5;
+    
+    static Cell[][] grid = new Cell[n][n];
     //Fill the grid with the correct cell information here
 
    
@@ -77,14 +79,14 @@ public class Algo {
     /**
      * Send the new information to the GUI
      */
-    private static void updateGUI() {       
+    private static void updateGUI() {    
+        //Use this information to update the position which the robot is in
     }
     
     private static boolean moveUp() {
         boolean success = false;
         if(yVal > 0) {
-            yVal = yVal - 1;
-            
+            yVal = yVal - 1;            
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];
             success = true;
@@ -94,9 +96,8 @@ public class Algo {
     
     private static boolean moveDown() {
         boolean success = false;
-        if(yVal < 5){
-            yVal = yVal + 1;
-                        
+        if(yVal < n){
+            yVal = yVal + 1;                        
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];
             success = true;
@@ -107,8 +108,7 @@ public class Algo {
     private static boolean moveLeft() {
         boolean success = false;
         if(xVal > 0) {
-            xVal = xVal - 1;
-                        
+            xVal = xVal - 1;                        
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];
             success = true;
@@ -118,9 +118,8 @@ public class Algo {
     
     private static boolean moveRight() {
         boolean success = false;
-        if(xVal < 5) {
-            xVal = xVal + 1;
-                        
+        if(xVal < n) {
+            xVal = xVal + 1;                        
             prevCell = currentCell;
             currentCell = grid[xVal][yVal];
             success = true;
