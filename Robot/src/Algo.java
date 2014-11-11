@@ -24,9 +24,9 @@ public class Algo {
     static final double modeCheck = 0.1;
 
     //r is set to exlpore immediately
-    static double r = 0.0; 
+    private static double r = 0.0; 
     
-    public static void move() {
+    public static void step() {
         boolean notDone = true;
         currentCell = grid[xVal][yVal];//default starting cell 
 
@@ -65,7 +65,7 @@ public class Algo {
      * Makes the next move made by the robot exploitation
      */
     private static void exploit() {
-        
+            
     }
 
     /**
