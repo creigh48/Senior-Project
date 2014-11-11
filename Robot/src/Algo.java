@@ -65,7 +65,27 @@ public class Algo {
      * Makes the next move made by the robot exploitation
      */
     private static void exploit() {
-            
+        boolean moved = false;
+        //find the cell with the greatest goodness value
+        int right = grid[xVal+1][yVal].getGoodness();
+        int left = grid[xVal-1][yVal].getGoodness();
+        int up = grid[xVal][yVal+1].getGoodness();
+        int down = grid[xVal][yVal-1].getGoodness();
+        
+        if(right > left && right > up && right > down) {
+            moved = moveRight();
+        }
+        else if(left > right && left > up && left >down){
+            moved = moveLeft();
+        }
+        else if(up > right && up >left && up > down){
+            moved = moveUp();
+        }
+        else if(down > right && down > left && down > up){
+            moved = moveDown();
+        }
+        else
+            explore();
     }
 
     /**
@@ -87,8 +107,8 @@ public class Algo {
         boolean success = false;
         if(yVal > 0) {
             yVal = yVal - 1;            
-            prevCell = currentCell;
-            currentCell = grid[xVal][yVal];
+            //prevCell = currentCell;
+            //currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -98,8 +118,8 @@ public class Algo {
         boolean success = false;
         if(yVal < n){
             yVal = yVal + 1;                        
-            prevCell = currentCell;
-            currentCell = grid[xVal][yVal];
+            //prevCell = currentCell;
+            //currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -109,8 +129,8 @@ public class Algo {
         boolean success = false;
         if(xVal > 0) {
             xVal = xVal - 1;                        
-            prevCell = currentCell;
-            currentCell = grid[xVal][yVal];
+            //prevCell = currentCell;
+            //currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -120,8 +140,8 @@ public class Algo {
         boolean success = false;
         if(xVal < n) {
             xVal = xVal + 1;                        
-            prevCell = currentCell;
-            currentCell = grid[xVal][yVal];
+            //prevCell = currentCell;
+            //currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
