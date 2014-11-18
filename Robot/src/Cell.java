@@ -19,7 +19,7 @@ public class Cell {
         this.rakeRot = rake;
     }
 
-    public void setGoodness(int i) {
+    public void setGoodness(int i) { //comment test
         goodness = i;
     }
 
