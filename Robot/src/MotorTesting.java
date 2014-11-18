@@ -1,5 +1,3 @@
-package com.mydomain;
-
 import java.io.*;
 
 import lejos.nxt.LCD;
