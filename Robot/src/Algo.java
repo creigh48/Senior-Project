@@ -16,9 +16,18 @@ public class Algo {
     
     private static final int n = 5;
     
-    static Cell[][] grid = new Cell[n][n];
+    static Cell[][] grid = {
+    	{new Cell(0,0), new Cell(-45,45), new Cell(45,90), new Cell(-90,45), new Cell(-45,45)},
+    	//{new Cell(), new Cell(), new Cell(), new Cell(), new Cell()}
+    	
+    						
+    						};
     //Fill the grid with the correct cell information here
-
+    //grid[0][0] = new Cell(0,0);
+    //grid[0][1] = new Cell(-45,45);
+    //grid[0][2] = new Cell(45,90);
+    //grid[0][3] = new Cell(-90,45);
+    //grid[0][4] = new Cell(-45,45);
    
     //parameter to explore/exploit
     static final double modeCheck = 0.1;
