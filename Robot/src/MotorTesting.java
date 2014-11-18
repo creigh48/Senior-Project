@@ -21,8 +21,8 @@ public class MotorTesting {
 	
 	public static void main(String[] args){
 		
-		Motor.A.setSpeed(120);
-		Motor.B.setSpeed(120);
+		Motor.A.setSpeed(120); //rake
+		Motor.B.setSpeed(120); //arm
 		
 		
 
