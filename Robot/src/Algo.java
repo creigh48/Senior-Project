@@ -66,11 +66,12 @@ public class Algo {
      */
     private static void exploit() {
         boolean moved = false;
+        double n = 0.1;
         //find the cell with the greatest goodness value
-        int right = grid[xVal+1][yVal].getGoodness();
-        int left = grid[xVal-1][yVal].getGoodness();
-        int up = grid[xVal][yVal+1].getGoodness();
-        int down = grid[xVal][yVal-1].getGoodness();
+        double right = n*grid[xVal+1][yVal].getGoodness() + grid[xVal+1][yVal].getrewardsRight();
+        double left = n*grid[xVal-1][yVal].getGoodness() + grid[xVal-1][yVal].getrewardsLeft();
+        double up = n*grid[xVal][yVal+1].getGoodness() + grid[xVal][yVal+1].getrewardsUp();
+        double down = n*grid[xVal][yVal-1].getGoodness() + grid[xVal][yVal-1].getrewardsDown();
         
         if(right > left && right > up && right > down) {
             moved = moveRight();
