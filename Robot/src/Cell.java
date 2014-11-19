@@ -1,3 +1,4 @@
+
 /**
  *
  * @author Jeffrey Creighton
@@ -11,8 +12,8 @@ public class Cell {
     private int rewardsLeft = 0;
     private int rewardsRight = 0;
 
-    private int armRot;
-    private int rakeRot;
+    private final int armRot;
+    private final int rakeRot;
 
     public Cell(int arm, int rake) { //grid positions
         this.armRot = arm;
