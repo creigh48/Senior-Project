@@ -17,11 +17,13 @@ public class Algo {
     private static final int n = 5;
     
     static Cell[][] grid = {
-    	{new Cell(0,0), new Cell(-45,45), new Cell(45,90), new Cell(-90,45), new Cell(-45,45)},
-    	//{new Cell(), new Cell(), new Cell(), new Cell(), new Cell()}
-    	
+    	{new Cell(-90,-90), new Cell(-90,-45), new Cell(-90,0), new Cell(-90, 45), new Cell(-90,90)},
+    	{new Cell(-45,-90), new Cell(-45,-45), new Cell(-45,0), new Cell(-45, 45), new Cell(-45,90)},
+    	{new Cell(0,-90), new Cell(0,-45), new Cell(0,0), new Cell(0,45), new Cell(0,90)},
+    	{new Cell(45,-90), new Cell(45,-45), new Cell(45,0), new Cell(45, 45), new Cell(45,90)},
+    	{new Cell(90,-90), new Cell(90,-45), new Cell(90,0), new Cell(90, 45), new Cell(90,90)}
     						
-    						};
+    	};
     //Fill the grid with the correct cell information here
     //grid[0][0] = new Cell(0,0);
     //grid[0][1] = new Cell(-45,45);
