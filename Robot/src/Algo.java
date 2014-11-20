@@ -156,4 +156,8 @@ public class Algo {
         }
         return success;
     }
+    
+    public static Cell[][] getGrid(){
+        return grid;
+    }
 }
