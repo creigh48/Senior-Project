@@ -18,7 +18,7 @@ public class Algo {
     
     static Cell[][] grid = {
     	
-    	{ new Cell(0,0), new Cell(-45, 45), new Cell(-90,0), new Cell(-45,-90), new Cell(-90,90)},
+    	{new Cell(0,0), new Cell(-45, 45), new Cell(-90,0), new Cell(-45,-90), new Cell(-90,90)},
     	{new Cell(-90, 45), new Cell(45,90), new Cell(-45,0), new Cell(-90,-45), new Cell(-45,90)},
     	{new Cell(0,-90), new Cell(0,-45), new Cell(-90,-90), new Cell(0,45), new Cell(0,90)},
     	{new Cell(45,-90), new Cell(45,-45), new Cell(45,0), new Cell(45, 45), new Cell(-45,-45)},
