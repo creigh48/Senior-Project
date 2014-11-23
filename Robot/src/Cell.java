@@ -60,6 +60,9 @@ public class Cell {
     public void setRewardsRight(int newRewards) {
     	rewardsRight = newRewards;
     }
-    
+    public String toString(){
+        String str ="          " + getrewardsUp() + "\n" + getrewardsLeft() + "                  " +getrewardsRight()+ "\n" +"          " + getrewardsDown();
+        return str;
+    }
 
 }

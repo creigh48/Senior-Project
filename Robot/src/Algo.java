@@ -72,29 +72,73 @@ public class Algo {
      */
     private static void exploit() {
         boolean moved = false;
-        double n = 0.1;
-        //find the cell with the greatest goodness value
-        double right = n*grid[xVal+1][yVal].getGoodness() + grid[xVal+1][yVal].getrewardsRight();
-        double left = n*grid[xVal-1][yVal].getGoodness() + grid[xVal-1][yVal].getrewardsLeft();
-        double up = n*grid[xVal][yVal+1].getGoodness() + grid[xVal][yVal+1].getrewardsUp();
-        double down = n*grid[xVal][yVal-1].getGoodness() + grid[xVal][yVal-1].getrewardsDown();
+        double n = 0.1;    
         
-        if(right > left && right > up && right > down) {
+        int current_goodness = currentCell.getGoodness();
+        
+        double[] cell_list = new double[4];
+        
+        if( xVal < 4){
+            cell_list[0] = current_goodness + n * (findLargest(getCellRewards(grid[xVal+1][yVal])) - current_goodness);
+        }
+        if(xVal > 0){
+            cell_list[1] = current_goodness + n * (findLargest(getCellRewards(grid[xVal-1][yVal])) - current_goodness);
+        }
+        if(yVal < 4){
+            cell_list[2] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal+1])) - current_goodness);
+        }
+        if(yVal > 0){
+            cell_list[3] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal-1])) - current_goodness);
+        }
+        
+        int largest = findLargestDouble(cell_list);
+        if(largest == 0) {
             moved = moveRight();
         }
-        else if(left > right && left > up && left >down){
+        else if(largest == 1){
             moved = moveLeft();
         }
-        else if(up > right && up >left && up > down){
+        else if(largest == 2){
             moved = moveUp();
         }
-        else if(down > right && down > left && down > up){
+        else if(largest == 3){
             moved = moveDown();
         }
         else
             explore();
     }
 
+    private static int[] getCellRewards(Cell c){
+        int[] rewards_list = new int[4];
+        rewards_list[0] = (c.getrewardsUp());
+        rewards_list[1] = (c.getrewardsDown());
+        rewards_list[2] = (c.getrewardsLeft());
+        rewards_list[3] = (c.getrewardsRight());
+        return rewards_list;
+    }
+    
+    private static int findLargestDouble(double[] list){
+        int index = 0;
+        double largest = list[0];
+        for(int i = 0; i < list.length; i++) {
+            if(list[i] > largest){
+                largest = list[i];
+                index = i;
+            }
+        }
+        return index; 
+    }
+    private static int findLargest(int[] list){
+        int index = 0;
+        int largest = list[0];
+        for(int i = 0; i < list.length; i++) {
+            if(list[i] > largest){
+                largest = list[i];
+                index = i;
+            }
+        }
+        return index;
+    }
     /**
      * Send the new position to the robot
      */
@@ -112,10 +156,10 @@ public class Algo {
     
     private static boolean moveUp() {
         boolean success = false;
-        if(yVal > 0) {
-            yVal = yVal - 1;            
-            //prevCell = currentCell;
-            //currentCell = grid[xVal][yVal];
+        if(yVal > 0) {                        
+            prevCell = currentCell;
+            yVal = yVal + 1;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -123,10 +167,10 @@ public class Algo {
     
     private static boolean moveDown() {
         boolean success = false;
-        if(yVal < n){
-            yVal = yVal + 1;                        
-            //prevCell = currentCell;
-            //currentCell = grid[xVal][yVal];
+        if(yVal < n){                        
+            prevCell = currentCell;
+            yVal = yVal -1;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -135,9 +179,9 @@ public class Algo {
     private static boolean moveLeft() {
         boolean success = false;
         if(xVal > 0) {
-            xVal = xVal - 1;                        
-            //prevCell = currentCell;
-            //currentCell = grid[xVal][yVal];
+            prevCell = currentCell;
+            xVal = xVal - 1;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;
@@ -146,9 +190,9 @@ public class Algo {
     private static boolean moveRight() {
         boolean success = false;
         if(xVal < n) {
-            xVal = xVal + 1;                        
-            //prevCell = currentCell;
-            //currentCell = grid[xVal][yVal];
+            prevCell = currentCell;
+            xVal = xVal + 1;
+            currentCell = grid[xVal][yVal];
             success = true;
         }
         return success;

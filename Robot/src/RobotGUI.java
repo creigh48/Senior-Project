@@ -9,7 +9,7 @@
  */
 public class RobotGUI extends javax.swing.JFrame {
 
-    static Cell[][] grid;
+    Cell[][] grid;
     /**
      * Creates new form RobotGUI
      */
@@ -25,134 +25,58 @@ public class RobotGUI extends javax.swing.JFrame {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
-        bindingGroup = new org.jdesktop.beansbinding.BindingGroup();
 
         jPanel1 = new javax.swing.JPanel();
-        cell5 = new javax.swing.JPanel();
-        la17 = new javax.swing.JLabel();
-        la18 = new javax.swing.JLabel();
-        la19 = new javax.swing.JLabel();
-        la20 = new javax.swing.JLabel();
-        cell4 = new javax.swing.JPanel();
-        la13 = new javax.swing.JLabel();
-        la14 = new javax.swing.JLabel();
-        la15 = new javax.swing.JLabel();
-        la16 = new javax.swing.JLabel();
-        cell3 = new javax.swing.JPanel();
-        la9 = new javax.swing.JLabel();
-        la10 = new javax.swing.JLabel();
-        la11 = new javax.swing.JLabel();
-        la12 = new javax.swing.JLabel();
-        cell9 = new javax.swing.JPanel();
-        jLabel15 = new javax.swing.JLabel();
-        jLabel68 = new javax.swing.JLabel();
-        jLabel69 = new javax.swing.JLabel();
-        jLabel70 = new javax.swing.JLabel();
-        cell2 = new javax.swing.JPanel();
-        la5 = new javax.swing.JLabel();
-        la6 = new javax.swing.JLabel();
-        la7 = new javax.swing.JLabel();
-        la8 = new javax.swing.JLabel();
-        cell10 = new javax.swing.JPanel();
-        jLabel17 = new javax.swing.JLabel();
-        jLabel74 = new javax.swing.JLabel();
-        jLabel75 = new javax.swing.JLabel();
-        jLabel76 = new javax.swing.JLabel();
-        cell8 = new javax.swing.JPanel();
-        jLabel23 = new javax.swing.JLabel();
-        jLabel92 = new javax.swing.JLabel();
-        jLabel93 = new javax.swing.JLabel();
-        jLabel94 = new javax.swing.JLabel();
-        cell7 = new javax.swing.JPanel();
-        jLabel26 = new javax.swing.JLabel();
-        jLabel101 = new javax.swing.JLabel();
-        jLabel102 = new javax.swing.JLabel();
-        jLabel103 = new javax.swing.JLabel();
-        cell15 = new javax.swing.JPanel();
-        jLabel27 = new javax.swing.JLabel();
-        jLabel104 = new javax.swing.JLabel();
-        jLabel121 = new javax.swing.JLabel();
-        jLabel122 = new javax.swing.JLabel();
-        cell14 = new javax.swing.JPanel();
-        jLabel28 = new javax.swing.JLabel();
-        jLabel123 = new javax.swing.JLabel();
-        jLabel124 = new javax.swing.JLabel();
-        jLabel125 = new javax.swing.JLabel();
-        cell1 = new javax.swing.JPanel();
-        la1 = new javax.swing.JLabel();
-        la2 = new javax.swing.JLabel();
-        la3 = new javax.swing.JLabel();
-        la4 = new javax.swing.JLabel();
-        cell6 = new javax.swing.JPanel();
-        jLabel30 = new javax.swing.JLabel();
-        jLabel129 = new javax.swing.JLabel();
-        jLabel130 = new javax.swing.JLabel();
-        jLabel131 = new javax.swing.JLabel();
-        cell12 = new javax.swing.JPanel();
-        jLabel31 = new javax.swing.JLabel();
-        jLabel132 = new javax.swing.JLabel();
-        jLabel133 = new javax.swing.JLabel();
-        jLabel134 = new javax.swing.JLabel();
-        cell13 = new javax.swing.JPanel();
-        jLabel32 = new javax.swing.JLabel();
-        jLabel135 = new javax.swing.JLabel();
-        jLabel136 = new javax.swing.JLabel();
-        jLabel137 = new javax.swing.JLabel();
-        cell20 = new javax.swing.JPanel();
-        jLabel33 = new javax.swing.JLabel();
-        jLabel138 = new javax.swing.JLabel();
-        jLabel139 = new javax.swing.JLabel();
-        jLabel140 = new javax.swing.JLabel();
-        cell11 = new javax.swing.JPanel();
-        jLabel34 = new javax.swing.JLabel();
-        jLabel141 = new javax.swing.JLabel();
-        jLabel142 = new javax.swing.JLabel();
-        jLabel143 = new javax.swing.JLabel();
-        cell19 = new javax.swing.JPanel();
-        jLabel35 = new javax.swing.JLabel();
-        jLabel144 = new javax.swing.JLabel();
-        jLabel145 = new javax.swing.JLabel();
-        jLabel146 = new javax.swing.JLabel();
-        cell18 = new javax.swing.JPanel();
-        jLabel36 = new javax.swing.JLabel();
-        jLabel147 = new javax.swing.JLabel();
-        jLabel148 = new javax.swing.JLabel();
-        jLabel149 = new javax.swing.JLabel();
-        cell17 = new javax.swing.JPanel();
-        jLabel37 = new javax.swing.JLabel();
-        jLabel150 = new javax.swing.JLabel();
-        jLabel151 = new javax.swing.JLabel();
-        jLabel152 = new javax.swing.JLabel();
-        cell25 = new javax.swing.JPanel();
-        jLabel38 = new javax.swing.JLabel();
-        jLabel153 = new javax.swing.JLabel();
-        jLabel154 = new javax.swing.JLabel();
-        jLabel155 = new javax.swing.JLabel();
-        cell24 = new javax.swing.JPanel();
-        jLabel39 = new javax.swing.JLabel();
-        jLabel156 = new javax.swing.JLabel();
-        jLabel157 = new javax.swing.JLabel();
-        jLabel158 = new javax.swing.JLabel();
-        cell23 = new javax.swing.JPanel();
-        jLabel40 = new javax.swing.JLabel();
-        jLabel159 = new javax.swing.JLabel();
-        jLabel160 = new javax.swing.JLabel();
-        jLabel161 = new javax.swing.JLabel();
-        cell22 = new javax.swing.JPanel();
-        jLabel41 = new javax.swing.JLabel();
-        jLabel162 = new javax.swing.JLabel();
-        jLabel163 = new javax.swing.JLabel();
-        jLabel164 = new javax.swing.JLabel();
-        cell16 = new javax.swing.JPanel();
-        jLabel42 = new javax.swing.JLabel();
-        jLabel165 = new javax.swing.JLabel();
-        jLabel166 = new javax.swing.JLabel();
-        jLabel167 = new javax.swing.JLabel();
-        cell21 = new javax.swing.JPanel();
-        jLabel43 = new javax.swing.JLabel();
-        jLabel168 = new javax.swing.JLabel();
-        jLabel169 = new javax.swing.JLabel();
-        jLabel170 = new javax.swing.JLabel();
+        jScrollPane1 = new javax.swing.JScrollPane();
+        cell4 = new javax.swing.JTextPane();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        cell3 = new javax.swing.JTextPane();
+        jScrollPane3 = new javax.swing.JScrollPane();
+        cell5 = new javax.swing.JTextPane();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        cell2 = new javax.swing.JTextPane();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        cell1 = new javax.swing.JTextPane();
+        jScrollPane6 = new javax.swing.JScrollPane();
+        cell10 = new javax.swing.JTextPane();
+        jScrollPane7 = new javax.swing.JScrollPane();
+        cell9 = new javax.swing.JTextPane();
+        jScrollPane8 = new javax.swing.JScrollPane();
+        cell8 = new javax.swing.JTextPane();
+        jScrollPane9 = new javax.swing.JScrollPane();
+        cell7 = new javax.swing.JTextPane();
+        jScrollPane10 = new javax.swing.JScrollPane();
+        cell15 = new javax.swing.JTextPane();
+        jScrollPane11 = new javax.swing.JScrollPane();
+        cell6 = new javax.swing.JTextPane();
+        jScrollPane12 = new javax.swing.JScrollPane();
+        cell13 = new javax.swing.JTextPane();
+        jScrollPane13 = new javax.swing.JScrollPane();
+        cell14 = new javax.swing.JTextPane();
+        jScrollPane14 = new javax.swing.JScrollPane();
+        cell11 = new javax.swing.JTextPane();
+        jScrollPane15 = new javax.swing.JScrollPane();
+        cell20 = new javax.swing.JTextPane();
+        jScrollPane16 = new javax.swing.JScrollPane();
+        cell12 = new javax.swing.JTextPane();
+        jScrollPane17 = new javax.swing.JScrollPane();
+        cell25 = new javax.swing.JTextPane();
+        jScrollPane18 = new javax.swing.JScrollPane();
+        cell19 = new javax.swing.JTextPane();
+        jScrollPane19 = new javax.swing.JScrollPane();
+        cell17 = new javax.swing.JTextPane();
+        jScrollPane20 = new javax.swing.JScrollPane();
+        cell18 = new javax.swing.JTextPane();
+        jScrollPane21 = new javax.swing.JScrollPane();
+        cell16 = new javax.swing.JTextPane();
+        jScrollPane22 = new javax.swing.JScrollPane();
+        cell24 = new javax.swing.JTextPane();
+        jScrollPane23 = new javax.swing.JScrollPane();
+        cell23 = new javax.swing.JTextPane();
+        jScrollPane24 = new javax.swing.JScrollPane();
+        cell21 = new javax.swing.JTextPane();
+        jScrollPane25 = new javax.swing.JScrollPane();
+        cell22 = new javax.swing.JTextPane();
         jPanel2 = new javax.swing.JPanel();
         clock = new javax.swing.JTextField();
         start_button = new javax.swing.JButton();
@@ -161,1061 +85,160 @@ public class RobotGUI extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reinforcement Learning");
-
-        org.jdesktop.beansbinding.Binding binding = org.jdesktop.beansbinding.Bindings.createAutoBinding(org.jdesktop.beansbinding.AutoBinding.UpdateStrategy.READ_WRITE, this, org.jdesktop.beansbinding.ELProperty.create("false"), this, org.jdesktop.beansbinding.BeanProperty.create("resizable"));
-        bindingGroup.addBinding(binding);
+        setResizable(false);
 
         jPanel1.setBackground(java.awt.Color.blue);
+        jPanel1.setPreferredSize(new java.awt.Dimension(600, 300));
 
-        cell5.setBackground(java.awt.Color.lightGray);
-        cell5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        la17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la17.setText("0");
-
-        la18.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la18.setText("0");
-
-        la19.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la19.setText("0");
-
-        la20.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la20.setText("0");
-
-        javax.swing.GroupLayout cell5Layout = new javax.swing.GroupLayout(cell5);
-        cell5.setLayout(cell5Layout);
-        cell5Layout.setHorizontalGroup(
-            cell5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell5Layout.createSequentialGroup()
-                .addComponent(la19, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(la20, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(la18, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell5Layout.setVerticalGroup(
-            cell5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell5Layout.createSequentialGroup()
-                .addComponent(la17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la20, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(la19, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(la18))
-        );
-
+        cell4.setEditable(false);
         cell4.setBackground(java.awt.Color.lightGray);
-        cell4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell4.setBorder(new javax.swing.border.MatteBorder(null));
+        cell4.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane1.setViewportView(cell4);
 
-        la13.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la13.setText("0");
-
-        la14.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la14.setText("0");
-
-        la15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la15.setText("0");
-
-        la16.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la16.setText("0");
-
-        javax.swing.GroupLayout cell4Layout = new javax.swing.GroupLayout(cell4);
-        cell4.setLayout(cell4Layout);
-        cell4Layout.setHorizontalGroup(
-            cell4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell4Layout.createSequentialGroup()
-                .addComponent(la15, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(la16, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(la14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell4Layout.setVerticalGroup(
-            cell4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell4Layout.createSequentialGroup()
-                .addComponent(la13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la16, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(la15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(la14))
-        );
-
+        cell3.setEditable(false);
         cell3.setBackground(java.awt.Color.lightGray);
-        cell3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell3.setBorder(new javax.swing.border.MatteBorder(null));
+        cell3.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane2.setViewportView(cell3);
 
-        la9.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la9.setText("0");
+        cell5.setEditable(false);
+        cell5.setBackground(java.awt.Color.lightGray);
+        cell5.setBorder(new javax.swing.border.MatteBorder(null));
+        cell5.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane3.setViewportView(cell5);
 
-        la10.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la10.setText("0");
-
-        la11.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la11.setText("0");
-
-        la12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la12.setText("0");
-
-        javax.swing.GroupLayout cell3Layout = new javax.swing.GroupLayout(cell3);
-        cell3.setLayout(cell3Layout);
-        cell3Layout.setHorizontalGroup(
-            cell3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell3Layout.createSequentialGroup()
-                .addComponent(la11, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(la12, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(la10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell3Layout.setVerticalGroup(
-            cell3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell3Layout.createSequentialGroup()
-                .addComponent(la9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la12, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(la11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(la10))
-        );
-
-        cell9.setBackground(java.awt.Color.lightGray);
-        cell9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel15.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel15.setText("0");
-
-        jLabel68.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel68.setText("0");
-
-        jLabel69.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel69.setText("0");
-
-        jLabel70.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel70.setText("0");
-
-        javax.swing.GroupLayout cell9Layout = new javax.swing.GroupLayout(cell9);
-        cell9.setLayout(cell9Layout);
-        cell9Layout.setHorizontalGroup(
-            cell9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell9Layout.createSequentialGroup()
-                .addComponent(jLabel69, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel70, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell9Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel68, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell9Layout.setVerticalGroup(
-            cell9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell9Layout.createSequentialGroup()
-                .addComponent(jLabel15)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel70, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel69, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel68))
-        );
-
+        cell2.setEditable(false);
         cell2.setBackground(java.awt.Color.lightGray);
-        cell2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell2.setBorder(new javax.swing.border.MatteBorder(null));
+        cell2.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane4.setViewportView(cell2);
 
-        la5.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la5.setText("0");
-
-        la6.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la6.setText("0");
-
-        la7.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la7.setText("0");
-
-        la8.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la8.setText("0");
-
-        javax.swing.GroupLayout cell2Layout = new javax.swing.GroupLayout(cell2);
-        cell2.setLayout(cell2Layout);
-        cell2Layout.setHorizontalGroup(
-            cell2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell2Layout.createSequentialGroup()
-                .addComponent(la7, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(la8, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell2Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(la6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell2Layout.setVerticalGroup(
-            cell2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell2Layout.createSequentialGroup()
-                .addComponent(la5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la8, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(la7, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(la6))
-        );
-
-        cell10.setBackground(java.awt.Color.lightGray);
-        cell10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel17.setText("0");
-
-        jLabel74.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel74.setText("0");
-
-        jLabel75.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel75.setText("0");
-
-        jLabel76.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel76.setText("0");
-
-        javax.swing.GroupLayout cell10Layout = new javax.swing.GroupLayout(cell10);
-        cell10.setLayout(cell10Layout);
-        cell10Layout.setHorizontalGroup(
-            cell10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell10Layout.createSequentialGroup()
-                .addComponent(jLabel75, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel76, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell10Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel17, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel74, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell10Layout.setVerticalGroup(
-            cell10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell10Layout.createSequentialGroup()
-                .addComponent(jLabel17)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel76, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel75, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel74))
-        );
-
-        cell8.setBackground(java.awt.Color.lightGray);
-        cell8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel23.setText("0");
-
-        jLabel92.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel92.setText("0");
-
-        jLabel93.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel93.setText("0");
-
-        jLabel94.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel94.setText("0");
-
-        javax.swing.GroupLayout cell8Layout = new javax.swing.GroupLayout(cell8);
-        cell8.setLayout(cell8Layout);
-        cell8Layout.setHorizontalGroup(
-            cell8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell8Layout.createSequentialGroup()
-                .addComponent(jLabel93, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel94, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell8Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel92, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell8Layout.setVerticalGroup(
-            cell8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell8Layout.createSequentialGroup()
-                .addComponent(jLabel23)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel94, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel93, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel92))
-        );
-
-        cell7.setBackground(java.awt.Color.lightGray);
-        cell7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel26.setText("0");
-
-        jLabel101.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel101.setText("0");
-
-        jLabel102.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel102.setText("0");
-
-        jLabel103.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel103.setText("0");
-
-        javax.swing.GroupLayout cell7Layout = new javax.swing.GroupLayout(cell7);
-        cell7.setLayout(cell7Layout);
-        cell7Layout.setHorizontalGroup(
-            cell7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell7Layout.createSequentialGroup()
-                .addComponent(jLabel102, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel103, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell7Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel101, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell7Layout.setVerticalGroup(
-            cell7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell7Layout.createSequentialGroup()
-                .addComponent(jLabel26)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel103, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel102, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel101))
-        );
-
-        cell15.setBackground(java.awt.Color.lightGray);
-        cell15.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel27.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel27.setText("0");
-
-        jLabel104.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel104.setText("0");
-
-        jLabel121.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel121.setText("0");
-
-        jLabel122.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel122.setText("0");
-
-        javax.swing.GroupLayout cell15Layout = new javax.swing.GroupLayout(cell15);
-        cell15.setLayout(cell15Layout);
-        cell15Layout.setHorizontalGroup(
-            cell15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell15Layout.createSequentialGroup()
-                .addComponent(jLabel121, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel122, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell15Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel104, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell15Layout.setVerticalGroup(
-            cell15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell15Layout.createSequentialGroup()
-                .addComponent(jLabel27)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell15Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel122, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel121, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel104))
-        );
-
-        cell14.setBackground(java.awt.Color.lightGray);
-        cell14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel28.setText("0");
-
-        jLabel123.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel123.setText("0");
-
-        jLabel124.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel124.setText("0");
-
-        jLabel125.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel125.setText("0");
-
-        javax.swing.GroupLayout cell14Layout = new javax.swing.GroupLayout(cell14);
-        cell14.setLayout(cell14Layout);
-        cell14Layout.setHorizontalGroup(
-            cell14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell14Layout.createSequentialGroup()
-                .addComponent(jLabel124, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel125, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell14Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel28, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel123, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell14Layout.setVerticalGroup(
-            cell14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell14Layout.createSequentialGroup()
-                .addComponent(jLabel28)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel125, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel124, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel123))
-        );
-
+        cell1.setEditable(false);
         cell1.setBackground(java.awt.Color.lightGray);
-        cell1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell1.setBorder(new javax.swing.border.MatteBorder(null));
+        cell1.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane5.setViewportView(cell1);
 
-        la1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la1.setText("0");
+        cell10.setEditable(false);
+        cell10.setBackground(java.awt.Color.lightGray);
+        cell10.setBorder(new javax.swing.border.MatteBorder(null));
+        cell10.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane6.setViewportView(cell10);
 
-        la2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la2.setText("0");
+        cell9.setEditable(false);
+        cell9.setBackground(java.awt.Color.lightGray);
+        cell9.setBorder(new javax.swing.border.MatteBorder(null));
+        cell9.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane7.setViewportView(cell9);
 
-        la3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la3.setText("0");
+        cell8.setEditable(false);
+        cell8.setBackground(java.awt.Color.lightGray);
+        cell8.setBorder(new javax.swing.border.MatteBorder(null));
+        cell8.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane8.setViewportView(cell8);
 
-        la4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        la4.setText("0");
+        cell7.setEditable(false);
+        cell7.setBackground(java.awt.Color.lightGray);
+        cell7.setBorder(new javax.swing.border.MatteBorder(null));
+        cell7.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane9.setViewportView(cell7);
 
-        javax.swing.GroupLayout cell1Layout = new javax.swing.GroupLayout(cell1);
-        cell1.setLayout(cell1Layout);
-        cell1Layout.setHorizontalGroup(
-            cell1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell1Layout.createSequentialGroup()
-                .addComponent(la3, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(la4, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(la2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell1Layout.setVerticalGroup(
-            cell1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell1Layout.createSequentialGroup()
-                .addComponent(la1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(la4, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(la3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(la2))
-        );
+        cell15.setEditable(false);
+        cell15.setBackground(java.awt.Color.lightGray);
+        cell15.setBorder(new javax.swing.border.MatteBorder(null));
+        cell15.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane10.setViewportView(cell15);
 
+        cell6.setEditable(false);
         cell6.setBackground(java.awt.Color.lightGray);
-        cell6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell6.setBorder(new javax.swing.border.MatteBorder(null));
+        cell6.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane11.setViewportView(cell6);
 
-        jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel30.setText("0");
-
-        jLabel129.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel129.setText("0");
-
-        jLabel130.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel130.setText("0");
-
-        jLabel131.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel131.setText("0");
-
-        javax.swing.GroupLayout cell6Layout = new javax.swing.GroupLayout(cell6);
-        cell6.setLayout(cell6Layout);
-        cell6Layout.setHorizontalGroup(
-            cell6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell6Layout.createSequentialGroup()
-                .addComponent(jLabel130, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel131, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel30, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel129, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell6Layout.setVerticalGroup(
-            cell6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell6Layout.createSequentialGroup()
-                .addComponent(jLabel30)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel131, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel130, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel129))
-        );
-
-        cell12.setBackground(java.awt.Color.lightGray);
-        cell12.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel31.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel31.setText("0");
-
-        jLabel132.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel132.setText("0");
-
-        jLabel133.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel133.setText("0");
-
-        jLabel134.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel134.setText("0");
-
-        javax.swing.GroupLayout cell12Layout = new javax.swing.GroupLayout(cell12);
-        cell12.setLayout(cell12Layout);
-        cell12Layout.setHorizontalGroup(
-            cell12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell12Layout.createSequentialGroup()
-                .addComponent(jLabel133, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel134, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell12Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel31, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel132, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell12Layout.setVerticalGroup(
-            cell12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell12Layout.createSequentialGroup()
-                .addComponent(jLabel31)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell12Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel134, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel133, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel132))
-        );
-
+        cell13.setEditable(false);
         cell13.setBackground(java.awt.Color.lightGray);
-        cell13.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell13.setBorder(new javax.swing.border.MatteBorder(null));
+        cell13.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane12.setViewportView(cell13);
 
-        jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel32.setText("0");
+        cell14.setEditable(false);
+        cell14.setBackground(java.awt.Color.lightGray);
+        cell14.setBorder(new javax.swing.border.MatteBorder(null));
+        cell14.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane13.setViewportView(cell14);
 
-        jLabel135.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel135.setText("0");
-
-        jLabel136.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel136.setText("0");
-
-        jLabel137.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel137.setText("0");
-
-        javax.swing.GroupLayout cell13Layout = new javax.swing.GroupLayout(cell13);
-        cell13.setLayout(cell13Layout);
-        cell13Layout.setHorizontalGroup(
-            cell13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell13Layout.createSequentialGroup()
-                .addComponent(jLabel136, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel137, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell13Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel32, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel135, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell13Layout.setVerticalGroup(
-            cell13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell13Layout.createSequentialGroup()
-                .addComponent(jLabel32)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell13Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel137, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel136, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel135))
-        );
-
-        cell20.setBackground(java.awt.Color.lightGray);
-        cell20.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel33.setText("0");
-
-        jLabel138.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel138.setText("0");
-
-        jLabel139.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel139.setText("0");
-
-        jLabel140.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel140.setText("0");
-
-        javax.swing.GroupLayout cell20Layout = new javax.swing.GroupLayout(cell20);
-        cell20.setLayout(cell20Layout);
-        cell20Layout.setHorizontalGroup(
-            cell20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell20Layout.createSequentialGroup()
-                .addComponent(jLabel139, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel140, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell20Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel33, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel138, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell20Layout.setVerticalGroup(
-            cell20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell20Layout.createSequentialGroup()
-                .addComponent(jLabel33)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel140, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel139, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel138))
-        );
-
+        cell11.setEditable(false);
         cell11.setBackground(java.awt.Color.lightGray);
-        cell11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell11.setBorder(new javax.swing.border.MatteBorder(null));
+        cell11.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane14.setViewportView(cell11);
 
-        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel34.setText("0");
+        cell20.setEditable(false);
+        cell20.setBackground(java.awt.Color.lightGray);
+        cell20.setBorder(new javax.swing.border.MatteBorder(null));
+        cell20.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane15.setViewportView(cell20);
 
-        jLabel141.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel141.setText("0");
+        cell12.setEditable(false);
+        cell12.setBackground(java.awt.Color.lightGray);
+        cell12.setBorder(new javax.swing.border.MatteBorder(null));
+        cell12.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane16.setViewportView(cell12);
 
-        jLabel142.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel142.setText("0");
-
-        jLabel143.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel143.setText("0");
-
-        javax.swing.GroupLayout cell11Layout = new javax.swing.GroupLayout(cell11);
-        cell11.setLayout(cell11Layout);
-        cell11Layout.setHorizontalGroup(
-            cell11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell11Layout.createSequentialGroup()
-                .addComponent(jLabel142, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel143, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell11Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel141, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell11Layout.setVerticalGroup(
-            cell11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell11Layout.createSequentialGroup()
-                .addComponent(jLabel34)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel143, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel142, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel141))
-        );
-
-        cell19.setBackground(java.awt.Color.lightGray);
-        cell19.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel35.setText("0");
-
-        jLabel144.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel144.setText("0");
-
-        jLabel145.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel145.setText("0");
-
-        jLabel146.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel146.setText("0");
-
-        javax.swing.GroupLayout cell19Layout = new javax.swing.GroupLayout(cell19);
-        cell19.setLayout(cell19Layout);
-        cell19Layout.setHorizontalGroup(
-            cell19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell19Layout.createSequentialGroup()
-                .addComponent(jLabel145, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel146, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell19Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel35, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel144, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell19Layout.setVerticalGroup(
-            cell19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell19Layout.createSequentialGroup()
-                .addComponent(jLabel35)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell19Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel146, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel145, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel144))
-        );
-
-        cell18.setBackground(java.awt.Color.lightGray);
-        cell18.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel36.setText("0");
-
-        jLabel147.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel147.setText("0");
-
-        jLabel148.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel148.setText("0");
-
-        jLabel149.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel149.setText("0");
-
-        javax.swing.GroupLayout cell18Layout = new javax.swing.GroupLayout(cell18);
-        cell18.setLayout(cell18Layout);
-        cell18Layout.setHorizontalGroup(
-            cell18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell18Layout.createSequentialGroup()
-                .addComponent(jLabel148, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel149, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell18Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel147, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell18Layout.setVerticalGroup(
-            cell18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell18Layout.createSequentialGroup()
-                .addComponent(jLabel36)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell18Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel149, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel148, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel147))
-        );
-
-        cell17.setBackground(java.awt.Color.lightGray);
-        cell17.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel37.setText("0");
-
-        jLabel150.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel150.setText("0");
-
-        jLabel151.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel151.setText("0");
-
-        jLabel152.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel152.setText("0");
-
-        javax.swing.GroupLayout cell17Layout = new javax.swing.GroupLayout(cell17);
-        cell17.setLayout(cell17Layout);
-        cell17Layout.setHorizontalGroup(
-            cell17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell17Layout.createSequentialGroup()
-                .addComponent(jLabel151, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel152, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell17Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel37, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel150, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell17Layout.setVerticalGroup(
-            cell17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell17Layout.createSequentialGroup()
-                .addComponent(jLabel37)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel152, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel151, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel150))
-        );
-
+        cell25.setEditable(false);
         cell25.setBackground(java.awt.Color.lightGray);
-        cell25.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell25.setBorder(new javax.swing.border.MatteBorder(null));
+        cell25.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane17.setViewportView(cell25);
 
-        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel38.setText("0");
+        cell19.setEditable(false);
+        cell19.setBackground(java.awt.Color.lightGray);
+        cell19.setBorder(new javax.swing.border.MatteBorder(null));
+        cell19.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane18.setViewportView(cell19);
 
-        jLabel153.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel153.setText("0");
+        cell17.setEditable(false);
+        cell17.setBackground(java.awt.Color.lightGray);
+        cell17.setBorder(new javax.swing.border.MatteBorder(null));
+        cell17.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane19.setViewportView(cell17);
 
-        jLabel154.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel154.setText("0");
+        cell18.setEditable(false);
+        cell18.setBackground(java.awt.Color.lightGray);
+        cell18.setBorder(new javax.swing.border.MatteBorder(null));
+        cell18.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane20.setViewportView(cell18);
 
-        jLabel155.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel155.setText("0");
-
-        javax.swing.GroupLayout cell25Layout = new javax.swing.GroupLayout(cell25);
-        cell25.setLayout(cell25Layout);
-        cell25Layout.setHorizontalGroup(
-            cell25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell25Layout.createSequentialGroup()
-                .addComponent(jLabel154, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel155, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell25Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel38, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel153, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell25Layout.setVerticalGroup(
-            cell25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell25Layout.createSequentialGroup()
-                .addComponent(jLabel38)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell25Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel155, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel154, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel153))
-        );
-
-        cell24.setBackground(java.awt.Color.lightGray);
-        cell24.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel39.setText("0");
-
-        jLabel156.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel156.setText("0");
-
-        jLabel157.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel157.setText("0");
-
-        jLabel158.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel158.setText("0");
-
-        javax.swing.GroupLayout cell24Layout = new javax.swing.GroupLayout(cell24);
-        cell24.setLayout(cell24Layout);
-        cell24Layout.setHorizontalGroup(
-            cell24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell24Layout.createSequentialGroup()
-                .addComponent(jLabel157, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel158, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell24Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel39, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel156, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell24Layout.setVerticalGroup(
-            cell24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell24Layout.createSequentialGroup()
-                .addComponent(jLabel39)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell24Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel158, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel157, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel156))
-        );
-
-        cell23.setBackground(java.awt.Color.lightGray);
-        cell23.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel40.setText("0");
-
-        jLabel159.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel159.setText("0");
-
-        jLabel160.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel160.setText("0");
-
-        jLabel161.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel161.setText("0");
-
-        javax.swing.GroupLayout cell23Layout = new javax.swing.GroupLayout(cell23);
-        cell23.setLayout(cell23Layout);
-        cell23Layout.setHorizontalGroup(
-            cell23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell23Layout.createSequentialGroup()
-                .addComponent(jLabel160, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel161, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell23Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel40, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel159, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell23Layout.setVerticalGroup(
-            cell23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell23Layout.createSequentialGroup()
-                .addComponent(jLabel40)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel161, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel160, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel159))
-        );
-
-        cell22.setBackground(java.awt.Color.lightGray);
-        cell22.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-
-        jLabel41.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel41.setText("0");
-
-        jLabel162.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel162.setText("0");
-
-        jLabel163.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel163.setText("0");
-
-        jLabel164.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel164.setText("0");
-
-        javax.swing.GroupLayout cell22Layout = new javax.swing.GroupLayout(cell22);
-        cell22.setLayout(cell22Layout);
-        cell22Layout.setHorizontalGroup(
-            cell22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell22Layout.createSequentialGroup()
-                .addComponent(jLabel163, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel164, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell22Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel41, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel162, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell22Layout.setVerticalGroup(
-            cell22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell22Layout.createSequentialGroup()
-                .addComponent(jLabel41)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell22Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel164, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel163, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel162))
-        );
-
+        cell16.setEditable(false);
         cell16.setBackground(java.awt.Color.lightGray);
-        cell16.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell16.setBorder(new javax.swing.border.MatteBorder(null));
+        cell16.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane21.setViewportView(cell16);
 
-        jLabel42.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel42.setText("0");
+        cell24.setEditable(false);
+        cell24.setBackground(java.awt.Color.lightGray);
+        cell24.setBorder(new javax.swing.border.MatteBorder(null));
+        cell24.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane22.setViewportView(cell24);
 
-        jLabel165.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel165.setText("0");
+        cell23.setEditable(false);
+        cell23.setBackground(java.awt.Color.lightGray);
+        cell23.setBorder(new javax.swing.border.MatteBorder(null));
+        cell23.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane23.setViewportView(cell23);
 
-        jLabel166.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel166.setText("0");
-
-        jLabel167.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel167.setText("0");
-
-        javax.swing.GroupLayout cell16Layout = new javax.swing.GroupLayout(cell16);
-        cell16.setLayout(cell16Layout);
-        cell16Layout.setHorizontalGroup(
-            cell16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell16Layout.createSequentialGroup()
-                .addComponent(jLabel166, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel167, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell16Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel42, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel165, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell16Layout.setVerticalGroup(
-            cell16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell16Layout.createSequentialGroup()
-                .addComponent(jLabel42)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell16Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel167, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel166, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel165))
-        );
-
+        cell21.setEditable(false);
         cell21.setBackground(java.awt.Color.lightGray);
-        cell21.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        cell21.setBorder(new javax.swing.border.MatteBorder(null));
+        cell21.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane24.setViewportView(cell21);
 
-        jLabel43.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel43.setText("0");
-
-        jLabel168.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel168.setText("0");
-
-        jLabel169.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel169.setText("0");
-
-        jLabel170.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel170.setText("0");
-
-        javax.swing.GroupLayout cell21Layout = new javax.swing.GroupLayout(cell21);
-        cell21.setLayout(cell21Layout);
-        cell21Layout.setHorizontalGroup(
-            cell21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell21Layout.createSequentialGroup()
-                .addComponent(jLabel169, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 50, Short.MAX_VALUE)
-                .addComponent(jLabel170, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-            .addGroup(cell21Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(cell21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel43, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jLabel168, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-        );
-        cell21Layout.setVerticalGroup(
-            cell21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(cell21Layout.createSequentialGroup()
-                .addComponent(jLabel43)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(cell21Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel170, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                    .addComponent(jLabel169, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel168))
-        );
+        cell22.setEditable(false);
+        cell22.setBackground(java.awt.Color.lightGray);
+        cell22.setBorder(new javax.swing.border.MatteBorder(null));
+        cell22.setText("          0\n\n0                  0\n\n          0");
+        jScrollPane25.setViewportView(cell22);
 
         jPanel2.setBackground(java.awt.Color.yellow);
 
@@ -1241,20 +264,20 @@ public class RobotGUI extends javax.swing.JFrame {
                     .addComponent(start_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(stop_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(reset_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(clock, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(18, 18, 18)
                 .addComponent(start_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(stop_button)
                 .addGap(18, 18, 18)
                 .addComponent(reset_button)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {reset_button, start_button, stop_button});
@@ -1265,122 +288,130 @@ public class RobotGUI extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGap(12, 12, 12)
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(cell1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addGap(18, 18, 18)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(cell6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(cell11, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cell16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(cell12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(cell13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGroup(jPanel1Layout.createSequentialGroup()
+                                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(cell7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                                .addComponent(cell17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(cell20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
-                        .addComponent(cell21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(cell25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addComponent(jScrollPane18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addContainerGap())
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.HORIZONTAL, new java.awt.Component[] {jScrollPane1, jScrollPane10, jScrollPane11, jScrollPane12, jScrollPane13, jScrollPane14, jScrollPane15, jScrollPane16, jScrollPane17, jScrollPane18, jScrollPane19, jScrollPane2, jScrollPane20, jScrollPane21, jScrollPane22, jScrollPane23, jScrollPane24, jScrollPane25, jScrollPane3, jScrollPane4, jScrollPane5, jScrollPane6, jScrollPane7, jScrollPane8, jScrollPane9});
+
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(cell3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cell10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cell15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cell20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell19, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell18, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cell25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(cell21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane7, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane6, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane11, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jScrollPane10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane12, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane13, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane14, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane16, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                        .addComponent(jScrollPane15, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addComponent(jScrollPane19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
+
+        jPanel1Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jScrollPane1, jScrollPane10, jScrollPane11, jScrollPane12, jScrollPane13, jScrollPane14, jScrollPane15, jScrollPane16, jScrollPane17, jScrollPane18, jScrollPane19, jScrollPane2, jScrollPane20, jScrollPane21, jScrollPane22, jScrollPane23, jScrollPane24, jScrollPane25, jScrollPane3, jScrollPane4, jScrollPane5, jScrollPane6, jScrollPane7, jScrollPane8, jScrollPane9});
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(layout.createSequentialGroup()
+                .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 719, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, 443, javax.swing.GroupLayout.PREFERRED_SIZE)
         );
-
-        bindingGroup.bind();
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -1424,44 +455,42 @@ public class RobotGUI extends javax.swing.JFrame {
      * @param new_grid 
      * update the cells of the gui with the cells from the algo
      */
-    public static void updateCells(Cell[][] new_grid){
+    public void updateCells(Cell[][] new_grid){
         grid = new_grid;
-        
-        
+        cell1.setText(grid[0][0].toString());
+        cell2.setText(grid[0][1].toString());
+        cell3.setText(grid[0][2].toString());
+        //Fill in for the remaining cells
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JPanel cell1;
-    private javax.swing.JPanel cell10;
-    private javax.swing.JPanel cell11;
-    private javax.swing.JPanel cell12;
-    private javax.swing.JPanel cell13;
-    private javax.swing.JPanel cell14;
-    private javax.swing.JPanel cell15;
-    private javax.swing.JPanel cell16;
-    private javax.swing.JPanel cell17;
-    private javax.swing.JPanel cell18;
-    private javax.swing.JPanel cell19;
-    private javax.swing.JPanel cell2;
-    private javax.swing.JPanel cell20;
-    private javax.swing.JPanel cell21;
-    private javax.swing.JPanel cell22;
-    private javax.swing.JPanel cell23;
-    private javax.swing.JPanel cell24;
-    private javax.swing.JPanel cell25;
-    private javax.swing.JPanel cell3;
-    private javax.swing.JPanel cell4;
-    private javax.swing.JPanel cell5;
-    private javax.swing.JPanel cell6;
-    private javax.swing.JPanel cell7;
-    private javax.swing.JPanel cell8;
-    private javax.swing.JPanel cell9;
+    private javax.swing.JTextPane cell1;
+    private javax.swing.JTextPane cell10;
+    private javax.swing.JTextPane cell11;
+    private javax.swing.JTextPane cell12;
+    private javax.swing.JTextPane cell13;
+    private javax.swing.JTextPane cell14;
+    private javax.swing.JTextPane cell15;
+    private javax.swing.JTextPane cell16;
+    private javax.swing.JTextPane cell17;
+    private javax.swing.JTextPane cell18;
+    private javax.swing.JTextPane cell19;
+    private javax.swing.JTextPane cell2;
+    private javax.swing.JTextPane cell20;
+    private javax.swing.JTextPane cell21;
+    private javax.swing.JTextPane cell22;
+    private javax.swing.JTextPane cell23;
+    private javax.swing.JTextPane cell24;
+    private javax.swing.JTextPane cell25;
+    private javax.swing.JTextPane cell3;
+    private javax.swing.JTextPane cell4;
+    private javax.swing.JTextPane cell5;
+    private javax.swing.JTextPane cell6;
+    private javax.swing.JTextPane cell7;
+    private javax.swing.JTextPane cell8;
+    private javax.swing.JTextPane cell9;
     private javax.swing.JTextField clock;
     private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel101;
-    private javax.swing.JLabel jLabel102;
-    private javax.swing.JLabel jLabel103;
-    private javax.swing.JLabel jLabel104;
     private javax.swing.JLabel jLabel105;
     private javax.swing.JLabel jLabel106;
     private javax.swing.JLabel jLabel107;
@@ -1478,86 +507,13 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel118;
     private javax.swing.JLabel jLabel119;
     private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel121;
-    private javax.swing.JLabel jLabel122;
-    private javax.swing.JLabel jLabel123;
-    private javax.swing.JLabel jLabel124;
-    private javax.swing.JLabel jLabel125;
-    private javax.swing.JLabel jLabel129;
-    private javax.swing.JLabel jLabel130;
-    private javax.swing.JLabel jLabel131;
-    private javax.swing.JLabel jLabel132;
-    private javax.swing.JLabel jLabel133;
-    private javax.swing.JLabel jLabel134;
-    private javax.swing.JLabel jLabel135;
-    private javax.swing.JLabel jLabel136;
-    private javax.swing.JLabel jLabel137;
-    private javax.swing.JLabel jLabel138;
-    private javax.swing.JLabel jLabel139;
-    private javax.swing.JLabel jLabel140;
-    private javax.swing.JLabel jLabel141;
-    private javax.swing.JLabel jLabel142;
-    private javax.swing.JLabel jLabel143;
-    private javax.swing.JLabel jLabel144;
-    private javax.swing.JLabel jLabel145;
-    private javax.swing.JLabel jLabel146;
-    private javax.swing.JLabel jLabel147;
-    private javax.swing.JLabel jLabel148;
-    private javax.swing.JLabel jLabel149;
-    private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel150;
-    private javax.swing.JLabel jLabel151;
-    private javax.swing.JLabel jLabel152;
-    private javax.swing.JLabel jLabel153;
-    private javax.swing.JLabel jLabel154;
-    private javax.swing.JLabel jLabel155;
-    private javax.swing.JLabel jLabel156;
-    private javax.swing.JLabel jLabel157;
-    private javax.swing.JLabel jLabel158;
-    private javax.swing.JLabel jLabel159;
-    private javax.swing.JLabel jLabel160;
-    private javax.swing.JLabel jLabel161;
-    private javax.swing.JLabel jLabel162;
-    private javax.swing.JLabel jLabel163;
-    private javax.swing.JLabel jLabel164;
-    private javax.swing.JLabel jLabel165;
-    private javax.swing.JLabel jLabel166;
-    private javax.swing.JLabel jLabel167;
-    private javax.swing.JLabel jLabel168;
-    private javax.swing.JLabel jLabel169;
-    private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel170;
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel23;
     private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel26;
-    private javax.swing.JLabel jLabel27;
-    private javax.swing.JLabel jLabel28;
-    private javax.swing.JLabel jLabel30;
-    private javax.swing.JLabel jLabel31;
-    private javax.swing.JLabel jLabel32;
-    private javax.swing.JLabel jLabel33;
-    private javax.swing.JLabel jLabel34;
-    private javax.swing.JLabel jLabel35;
-    private javax.swing.JLabel jLabel36;
-    private javax.swing.JLabel jLabel37;
-    private javax.swing.JLabel jLabel38;
-    private javax.swing.JLabel jLabel39;
-    private javax.swing.JLabel jLabel40;
-    private javax.swing.JLabel jLabel41;
-    private javax.swing.JLabel jLabel42;
-    private javax.swing.JLabel jLabel43;
-    private javax.swing.JLabel jLabel68;
-    private javax.swing.JLabel jLabel69;
-    private javax.swing.JLabel jLabel70;
-    private javax.swing.JLabel jLabel74;
-    private javax.swing.JLabel jLabel75;
-    private javax.swing.JLabel jLabel76;
     private javax.swing.JLabel jLabel77;
     private javax.swing.JLabel jLabel78;
     private javax.swing.JLabel jLabel79;
@@ -1573,9 +529,6 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel89;
     private javax.swing.JLabel jLabel90;
     private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel92;
-    private javax.swing.JLabel jLabel93;
-    private javax.swing.JLabel jLabel94;
     private javax.swing.JLabel jLabel95;
     private javax.swing.JLabel jLabel96;
     private javax.swing.JLabel jLabel97;
@@ -1594,29 +547,33 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel35;
     private javax.swing.JPanel jPanel37;
     private javax.swing.JPanel jPanel38;
-    private javax.swing.JLabel la1;
-    private javax.swing.JLabel la10;
-    private javax.swing.JLabel la11;
-    private javax.swing.JLabel la12;
-    private javax.swing.JLabel la13;
-    private javax.swing.JLabel la14;
-    private javax.swing.JLabel la15;
-    private javax.swing.JLabel la16;
-    private javax.swing.JLabel la17;
-    private javax.swing.JLabel la18;
-    private javax.swing.JLabel la19;
-    private javax.swing.JLabel la2;
-    private javax.swing.JLabel la20;
-    private javax.swing.JLabel la3;
-    private javax.swing.JLabel la4;
-    private javax.swing.JLabel la5;
-    private javax.swing.JLabel la6;
-    private javax.swing.JLabel la7;
-    private javax.swing.JLabel la8;
-    private javax.swing.JLabel la9;
+    private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane10;
+    private javax.swing.JScrollPane jScrollPane11;
+    private javax.swing.JScrollPane jScrollPane12;
+    private javax.swing.JScrollPane jScrollPane13;
+    private javax.swing.JScrollPane jScrollPane14;
+    private javax.swing.JScrollPane jScrollPane15;
+    private javax.swing.JScrollPane jScrollPane16;
+    private javax.swing.JScrollPane jScrollPane17;
+    private javax.swing.JScrollPane jScrollPane18;
+    private javax.swing.JScrollPane jScrollPane19;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JScrollPane jScrollPane20;
+    private javax.swing.JScrollPane jScrollPane21;
+    private javax.swing.JScrollPane jScrollPane22;
+    private javax.swing.JScrollPane jScrollPane23;
+    private javax.swing.JScrollPane jScrollPane24;
+    private javax.swing.JScrollPane jScrollPane25;
+    private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JScrollPane jScrollPane6;
+    private javax.swing.JScrollPane jScrollPane7;
+    private javax.swing.JScrollPane jScrollPane8;
+    private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JButton reset_button;
     private javax.swing.JButton start_button;
     private javax.swing.JButton stop_button;
-    private org.jdesktop.beansbinding.BindingGroup bindingGroup;
     // End of variables declaration//GEN-END:variables
 }

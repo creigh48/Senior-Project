@@ -19,16 +19,11 @@ public class MotorTesting {
 	private static DataInputStream dis;
 	private static DataOutputStream dos;
 	
-	public static void main(String[] args){
-		
-		Motor.A.setSpeed(120); //rake
-		Motor.B.setSpeed(120); //arm
-		
-		
-
-				
-		Button.waitForAnyPress();
-	}
+//	public static void main(String[] args){		
+//		Motor.A.setSpeed(120); //rake
+//		Motor.B.setSpeed(120); //arm				
+//		Button.waitForAnyPress();
+//	}
 	
 	private static void testMotors(){
 		
