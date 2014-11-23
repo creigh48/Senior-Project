@@ -460,7 +460,32 @@ public class RobotGUI extends javax.swing.JFrame {
         cell1.setText(grid[0][0].toString());
         cell2.setText(grid[0][1].toString());
         cell3.setText(grid[0][2].toString());
-        //Fill in for the remaining cells
+        cell4.setText(grid[0][3].toString());
+        cell5.setText(grid[0][4].toString());
+        
+        cell1.setText(grid[1][0].toString());
+        cell2.setText(grid[1][1].toString());
+        cell3.setText(grid[1][2].toString());
+        cell4.setText(grid[1][3].toString());
+        cell5.setText(grid[1][4].toString());
+        
+        cell1.setText(grid[2][0].toString());
+        cell2.setText(grid[2][1].toString());
+        cell3.setText(grid[2][2].toString());
+        cell4.setText(grid[2][3].toString());
+        cell5.setText(grid[2][4].toString());
+        
+        cell1.setText(grid[3][0].toString());
+        cell2.setText(grid[3][1].toString());
+        cell3.setText(grid[3][2].toString());
+        cell4.setText(grid[3][3].toString());
+        cell5.setText(grid[3][4].toString());
+        
+        cell1.setText(grid[4][0].toString());
+        cell2.setText(grid[4][1].toString());
+        cell3.setText(grid[4][2].toString());
+        cell4.setText(grid[4][3].toString());
+        cell5.setText(grid[4][4].toString());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
