@@ -1,20 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 /**
  *
- * @author jeffrey
+ * @author Jeffrey Creighton
  */
+import java.awt.event.ActionListener;
+import java.awt.event.ActionEvent;
+import javax.swing.Timer;
 public class RobotGUI extends javax.swing.JFrame {
-
+    Timer timer;
     Cell[][] grid;
     /**
      * Creates new form RobotGUI
      */
     public RobotGUI() {
         initComponents();
+            timer = new Timer(200, new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                move();          
+                }
+            });
+            timer.setInitialDelay(0);
     }
 
     /**
@@ -78,7 +83,7 @@ public class RobotGUI extends javax.swing.JFrame {
         jScrollPane25 = new javax.swing.JScrollPane();
         cell22 = new javax.swing.JTextPane();
         jPanel2 = new javax.swing.JPanel();
-        clock = new javax.swing.JTextField();
+        step_counter = new javax.swing.JTextField();
         start_button = new javax.swing.JButton();
         stop_button = new javax.swing.JButton();
         reset_button = new javax.swing.JButton();
@@ -242,16 +247,31 @@ public class RobotGUI extends javax.swing.JFrame {
 
         jPanel2.setBackground(java.awt.Color.yellow);
 
-        clock.setEditable(false);
-        clock.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
-        clock.setHorizontalAlignment(javax.swing.JTextField.CENTER);
-        clock.setText("00:00:00");
+        step_counter.setEditable(false);
+        step_counter.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
+        step_counter.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        step_counter.setText("0");
 
         start_button.setText("Start");
+        start_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                start_buttonMouseClicked(evt);
+            }
+        });
 
         stop_button.setText("Stop");
+        stop_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                stop_buttonMouseClicked(evt);
+            }
+        });
 
         reset_button.setText("Reset");
+        reset_button.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                reset_buttonMouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -260,7 +280,7 @@ public class RobotGUI extends javax.swing.JFrame {
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(clock, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                    .addComponent(step_counter, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
                     .addComponent(start_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(stop_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(reset_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
@@ -270,7 +290,7 @@ public class RobotGUI extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(clock, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(step_counter, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(start_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
@@ -416,6 +436,29 @@ public class RobotGUI extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    boolean moving = false;
+    private void start_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_start_buttonMouseClicked
+        moving = true;
+        timer.start();
+    }//GEN-LAST:event_start_buttonMouseClicked
+
+    private void stop_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stop_buttonMouseClicked
+        moving = false;
+        timer.stop();
+    }//GEN-LAST:event_stop_buttonMouseClicked
+
+    private void reset_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_buttonMouseClicked
+        timer.stop();
+        Main.reset();
+    }//GEN-LAST:event_reset_buttonMouseClicked
+
+    
+    
+    private void move(){
+        if(moving){
+            Main.startMoving();
+        }
+    }
     /**
      * @param args the command line arguments
      */
@@ -457,35 +500,36 @@ public class RobotGUI extends javax.swing.JFrame {
      */
     public void updateCells(Cell[][] new_grid){
         grid = new_grid;
-        cell1.setText(grid[0][0].toString());
-        cell2.setText(grid[0][1].toString());
-        cell3.setText(grid[0][2].toString());
-        cell4.setText(grid[0][3].toString());
-        cell5.setText(grid[0][4].toString());
+        cell21.setText(grid[0][0].toString());
+        cell16.setText(grid[0][1].toString());
+        cell11.setText(grid[0][2].toString());
+        cell6.setText(grid[0][3].toString());
+        cell1.setText(grid[0][4].toString());
         
-        cell6.setText(grid[1][0].toString());
-        cell7.setText(grid[1][1].toString());
-        cell8.setText(grid[1][2].toString());
-        cell9.setText(grid[1][3].toString());
-        cell10.setText(grid[1][4].toString());
+        cell22.setText(grid[1][0].toString());
+        cell17.setText(grid[1][1].toString());
+        cell12.setText(grid[1][2].toString());
+        cell7.setText(grid[1][3].toString());
+        cell2.setText(grid[1][4].toString());
         
-        cell11.setText(grid[2][0].toString());
-        cell12.setText(grid[2][1].toString());
+        cell23.setText(grid[2][0].toString());
+        cell18.setText(grid[2][1].toString());
         cell13.setText(grid[2][2].toString());
-        cell14.setText(grid[2][3].toString());
-        cell15.setText(grid[2][4].toString());
+        cell8.setText(grid[2][3].toString());
+        cell3.setText(grid[2][4].toString());
         
-        cell16.setText(grid[3][0].toString());
-        cell17.setText(grid[3][1].toString());
-        cell18.setText(grid[3][2].toString());
-        cell19.setText(grid[3][3].toString());
-        cell20.setText(grid[3][4].toString());
+        cell24.setText(grid[3][0].toString());
+        cell19.setText(grid[3][1].toString());
+        cell14.setText(grid[3][2].toString());
+        cell9.setText(grid[3][3].toString());
+        cell4.setText(grid[3][4].toString());
         
-        cell21.setText(grid[4][0].toString());
-        cell22.setText(grid[4][1].toString());
-        cell23.setText(grid[4][2].toString());
-        cell24.setText(grid[4][3].toString());
-        cell25.setText(grid[4][4].toString());
+        cell25.setText(grid[4][0].toString());
+        cell20.setText(grid[4][1].toString());
+        cell15.setText(grid[4][2].toString());
+        cell10.setText(grid[4][3].toString());
+        cell5.setText(grid[4][4].toString());
+        
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -514,64 +558,8 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JTextPane cell7;
     private javax.swing.JTextPane cell8;
     private javax.swing.JTextPane cell9;
-    private javax.swing.JTextField clock;
-    private javax.swing.JLabel jLabel100;
-    private javax.swing.JLabel jLabel105;
-    private javax.swing.JLabel jLabel106;
-    private javax.swing.JLabel jLabel107;
-    private javax.swing.JLabel jLabel108;
-    private javax.swing.JLabel jLabel109;
-    private javax.swing.JLabel jLabel110;
-    private javax.swing.JLabel jLabel111;
-    private javax.swing.JLabel jLabel112;
-    private javax.swing.JLabel jLabel113;
-    private javax.swing.JLabel jLabel114;
-    private javax.swing.JLabel jLabel115;
-    private javax.swing.JLabel jLabel116;
-    private javax.swing.JLabel jLabel117;
-    private javax.swing.JLabel jLabel118;
-    private javax.swing.JLabel jLabel119;
-    private javax.swing.JLabel jLabel120;
-    private javax.swing.JLabel jLabel18;
-    private javax.swing.JLabel jLabel19;
-    private javax.swing.JLabel jLabel20;
-    private javax.swing.JLabel jLabel21;
-    private javax.swing.JLabel jLabel22;
-    private javax.swing.JLabel jLabel24;
-    private javax.swing.JLabel jLabel25;
-    private javax.swing.JLabel jLabel77;
-    private javax.swing.JLabel jLabel78;
-    private javax.swing.JLabel jLabel79;
-    private javax.swing.JLabel jLabel80;
-    private javax.swing.JLabel jLabel81;
-    private javax.swing.JLabel jLabel82;
-    private javax.swing.JLabel jLabel83;
-    private javax.swing.JLabel jLabel84;
-    private javax.swing.JLabel jLabel85;
-    private javax.swing.JLabel jLabel86;
-    private javax.swing.JLabel jLabel87;
-    private javax.swing.JLabel jLabel88;
-    private javax.swing.JLabel jLabel89;
-    private javax.swing.JLabel jLabel90;
-    private javax.swing.JLabel jLabel91;
-    private javax.swing.JLabel jLabel95;
-    private javax.swing.JLabel jLabel96;
-    private javax.swing.JLabel jLabel97;
-    private javax.swing.JLabel jLabel98;
-    private javax.swing.JLabel jLabel99;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JPanel jPanel27;
-    private javax.swing.JPanel jPanel28;
-    private javax.swing.JPanel jPanel29;
-    private javax.swing.JPanel jPanel30;
-    private javax.swing.JPanel jPanel31;
-    private javax.swing.JPanel jPanel32;
-    private javax.swing.JPanel jPanel33;
-    private javax.swing.JPanel jPanel34;
-    private javax.swing.JPanel jPanel35;
-    private javax.swing.JPanel jPanel37;
-    private javax.swing.JPanel jPanel38;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane10;
     private javax.swing.JScrollPane jScrollPane11;
@@ -599,6 +587,7 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane9;
     private javax.swing.JButton reset_button;
     private javax.swing.JButton start_button;
+    private javax.swing.JTextField step_counter;
     private javax.swing.JButton stop_button;
     // End of variables declaration//GEN-END:variables
 }

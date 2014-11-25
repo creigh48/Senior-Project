@@ -15,8 +15,9 @@ public class Algo {
     
     private static int xVal = 0;
     private static int yVal = 0;
-    
+    private int steps = 0;
     private static final int n = 5;
+    
     
     static Cell[][] grid = {
     	
@@ -29,13 +30,13 @@ public class Algo {
     	};
    
     //parameter to explore/exploit
-    static final double modeCheck = 0.1;
+    static final double modeCheck = 0.8;
 
     //r is set to exlpore immediately
     private static double r = 0.0; 
     
     public static void step() {
-        boolean notDone = true;
+        
         currentCell = grid[xVal][yVal];//default starting cell 
 
         if (r < modeCheck) {
@@ -44,7 +45,7 @@ public class Algo {
             exploit();
         }
 
-        updateGUI();
+
         r = random.nextDouble(); //find next mode
     }
 
@@ -54,16 +55,19 @@ public class Algo {
     private static void explore() {
         boolean notFound = true;
         while(notFound) {
-            int choice = random.nextInt(2) + 1;
-            switch (choice) {
-                case 1: notFound = moveUp();
-                    break;
-                case 2: notFound = moveDown();
-                    break;
-                case 3: notFound = moveRight();
-                    break;
-                case 4: notFound = moveLeft();
-                    break;
+            int choice = random.nextInt(4) + 1;
+            System.out.println("random -- " + choice);
+            if(choice == 1){
+                notFound = moveUp();
+            }
+            else if(choice == 2){
+                notFound = moveDown();
+            }
+            else if(choice == 3){
+                notFound = moveLeft();
+            }
+            else if(choice == 4){
+                notFound = moveRight();
             }
         }
     }
@@ -79,16 +83,17 @@ public class Algo {
         
         double[] cell_list = new double[4];
         
-        if( xVal < 4){
+        if(yVal < 4 && yVal > 0 && xVal > 0 && xVal < 4){
             cell_list[0] = current_goodness + n * (findLargest(getCellRewards(grid[xVal+1][yVal])) - current_goodness);
         }
-        if(xVal > 0){
+        if(yVal < 4 && yVal > 0 && xVal > 0 && xVal < 4){
             cell_list[1] = current_goodness + n * (findLargest(getCellRewards(grid[xVal-1][yVal])) - current_goodness);
         }
-        if(yVal < 4){
+        if(yVal < 4 && yVal > 0 && xVal > 0 && xVal < 4){
             cell_list[2] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal-1])) - current_goodness);
         }
-        if(yVal > 0){
+        if(yVal < 4 && yVal > 0 && xVal > 0 && xVal < 4){
+            
             cell_list[3] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal+1])) - current_goodness);
         }
         
@@ -164,67 +169,80 @@ public class Algo {
         }
         
     }
-
-    /**
-     * Send the new information to the GUI
-     */
-    private static void updateGUI() {    
-        //Use this information to update the position which the robot is in
-    }
     
     private static boolean moveUp() {
-        boolean success = false;
-        if(yVal > 0) {                        
+        boolean success = true;
+        if(yVal < 4) {                        
             prevCell = currentCell;
             yVal = yVal + 1;
+            System.out.println("Up");
+            System.out.println(xVal + "," + yVal);
             currentCell = grid[xVal][yVal];
             
             updateRobot(0);
             
-            success = true;
+            success = false;
         }
         return success;
     }
     
     private static boolean moveDown() {
-        boolean success = false;
-        if(yVal < n){                        
+        boolean success = true;
+        if(yVal > 0){                        
             prevCell = currentCell;
             yVal = yVal -1;
+            System.out.println("Down");
+            System.out.println(xVal + "," + yVal);
             currentCell = grid[xVal][yVal];
             
             updateRobot(1);
             
-            success = true;
+            success = false;
         }
         return success;
     }
     
     private static boolean moveLeft() {
-        boolean success = false;
+        boolean success = true;
         if(xVal > 0) {
             prevCell = currentCell;
             xVal = xVal - 1;
+            System.out.println("Left");
+            System.out.println(xVal + "," + yVal);
             currentCell = grid[xVal][yVal];
             
             updateRobot(2);
             
-            success = true;
+            success = false;
         }
         return success;
     }
     
     private static boolean moveRight() {
-        boolean success = false;
-        if(xVal < n) {
+        boolean success = true;
+        if(xVal < 4) {
             prevCell = currentCell;
             xVal = xVal + 1;
+            System.out.println("Right");
+            System.out.println(xVal + "," + yVal);
             currentCell = grid[xVal][yVal];
             
             updateRobot(3);
             
-            success = true;
+            success = false;
         }
         return success;
+    }
+    
+    public void resetSteps(){
+        steps = 0;
+    }
+    
+    public void tickSteps(){
+        steps =+ 1;
+    }
+    
+    public int getSteps(){
+        return steps;
     }
 }

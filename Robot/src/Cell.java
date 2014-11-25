@@ -15,6 +15,11 @@ public class Cell {
     private final int armRot;
     private final int rakeRot;
 
+    public Cell(){
+        this.armRot = 0;
+        this.rakeRot = 0;
+    }
+    
     public Cell(int arm, int rake) { //grid positions
         this.armRot = arm;
         this.rakeRot = rake;
