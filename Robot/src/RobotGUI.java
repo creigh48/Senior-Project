@@ -463,29 +463,29 @@ public class RobotGUI extends javax.swing.JFrame {
         cell4.setText(grid[0][3].toString());
         cell5.setText(grid[0][4].toString());
         
-        cell1.setText(grid[1][0].toString());
-        cell2.setText(grid[1][1].toString());
-        cell3.setText(grid[1][2].toString());
-        cell4.setText(grid[1][3].toString());
-        cell5.setText(grid[1][4].toString());
+        cell6.setText(grid[1][0].toString());
+        cell7.setText(grid[1][1].toString());
+        cell8.setText(grid[1][2].toString());
+        cell9.setText(grid[1][3].toString());
+        cell10.setText(grid[1][4].toString());
         
-        cell1.setText(grid[2][0].toString());
-        cell2.setText(grid[2][1].toString());
-        cell3.setText(grid[2][2].toString());
-        cell4.setText(grid[2][3].toString());
-        cell5.setText(grid[2][4].toString());
+        cell11.setText(grid[2][0].toString());
+        cell12.setText(grid[2][1].toString());
+        cell13.setText(grid[2][2].toString());
+        cell14.setText(grid[2][3].toString());
+        cell15.setText(grid[2][4].toString());
         
-        cell1.setText(grid[3][0].toString());
-        cell2.setText(grid[3][1].toString());
-        cell3.setText(grid[3][2].toString());
-        cell4.setText(grid[3][3].toString());
-        cell5.setText(grid[3][4].toString());
+        cell16.setText(grid[3][0].toString());
+        cell17.setText(grid[3][1].toString());
+        cell18.setText(grid[3][2].toString());
+        cell19.setText(grid[3][3].toString());
+        cell20.setText(grid[3][4].toString());
         
-        cell1.setText(grid[4][0].toString());
-        cell2.setText(grid[4][1].toString());
-        cell3.setText(grid[4][2].toString());
-        cell4.setText(grid[4][3].toString());
-        cell5.setText(grid[4][4].toString());
+        cell21.setText(grid[4][0].toString());
+        cell22.setText(grid[4][1].toString());
+        cell23.setText(grid[4][2].toString());
+        cell24.setText(grid[4][3].toString());
+        cell25.setText(grid[4][4].toString());
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables

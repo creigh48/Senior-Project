@@ -61,7 +61,9 @@ public class Cell {
     	rewardsRight = newRewards;
     }
     public String toString(){
-        String str ="          " + getrewardsUp() + "\n" + getrewardsLeft() + "                  " +getrewardsRight()+ "\n" +"          " + getrewardsDown();
+        String str ="          " + getrewardsUp() + "\n\n" 
+                + getrewardsLeft() + "                  " +getrewardsRight()+ "\n\n" 
+                +"          " + getrewardsDown();
         return str;
     }
 

@@ -10,5 +10,6 @@ public class Main {
         Algo algo = new Algo();
         RobotGUI gui = new RobotGUI();
         gui.setVisible(true);
+        gui.updateCells(algo.grid);
     }
 }
