@@ -2,18 +2,21 @@
  *
  * @author Jeffrey Creighton
  */
+import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.Timer;
 public class RobotGUI extends javax.swing.JFrame {
     Timer timer;
     Cell[][] grid;
+    Cell[] cells;
+    int counter = 0;
     /**
      * Creates new form RobotGUI
      */
     public RobotGUI() {
         initComponents();
-            timer = new Timer(200, new ActionListener() {
+            timer = new Timer(1500, new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
                 move();          
@@ -498,8 +501,12 @@ public class RobotGUI extends javax.swing.JFrame {
      * @param new_grid 
      * update the cells of the gui with the cells from the algo
      */
-    public void updateCells(Cell[][] new_grid){
+    public void updateCells(Cell[][] new_grid, Cell currentCell, Cell prevCell){
+        
         grid = new_grid;
+        
+        step_counter.setText(""+counter);
+        
         cell21.setText(grid[0][0].toString());
         cell16.setText(grid[0][1].toString());
         cell11.setText(grid[0][2].toString());
@@ -530,8 +537,68 @@ public class RobotGUI extends javax.swing.JFrame {
         cell10.setText(grid[4][3].toString());
         cell5.setText(grid[4][4].toString());
         
+        
+        counter = counter + 1;
     }
-
+    
+    private void highlightCurrent(Cell currentCell){
+        //Change the labels, copy the whole thing and repeat for previous cell
+        if(currentCell == grid[0][0]){
+            cell21.setBackground(Color.yellow);
+        }else if(currentCell == grid[0][1]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[0][2]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[0][3]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[0][4]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[1][0]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[1][1]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[1][2]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[1][3]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[1][4]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[2][0]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[2][1]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[2][2]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[2][3]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[2][4]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[3][0]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[3][1]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[3][2]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[3][3]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[3][3]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[3][4]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[4][0]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[4][1]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[4][2]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[4][3]){
+            cell16.setBackground(Color.yellow);
+        }else if(currentCell == grid[4][4]){
+            cell16.setBackground(Color.yellow);
+        }
+      
+    }
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextPane cell1;
     private javax.swing.JTextPane cell10;

@@ -12,7 +12,7 @@ public class Algo {
     static Random random = new Random();
     private static Cell currentCell;
     private static Cell prevCell;
-    
+    private static ArrayList<Cell> cells= new ArrayList<Cell>();
     private static int xVal = 0;
     private static int yVal = 0;
     private int steps = 0;
@@ -54,9 +54,10 @@ public class Algo {
      */
     private static void explore() {
         boolean notFound = true;
+        int choice = 0;
         while(notFound) {
-            int choice = random.nextInt(4) + 1;
-            System.out.println("random -- " + choice);
+            choice = random.nextInt(4) + 1;
+            
             if(choice == 1){
                 notFound = moveUp();
             }
@@ -70,6 +71,7 @@ public class Algo {
                 notFound = moveRight();
             }
         }
+        System.out.println("random -- " + choice);
     }
 
     /**
@@ -234,15 +236,10 @@ public class Algo {
         return success;
     }
     
-    public void resetSteps(){
-        steps = 0;
+    public static Cell getCurrentCell(){
+        return currentCell;
     }
-    
-    public void tickSteps(){
-        steps =+ 1;
-    }
-    
-    public int getSteps(){
-        return steps;
+    public static Cell getPreviousCell(){
+        return prevCell;
     }
 }
