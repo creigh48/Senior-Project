@@ -7,6 +7,8 @@
 import java.util.*;
 
 public class Algo {
+    static RobotHandler handler = new RobotHandler();
+    
     static Random random = new Random();
     private static Cell currentCell;
     private static Cell prevCell;
@@ -42,7 +44,6 @@ public class Algo {
             exploit();
         }
 
-        updateRobot();
         updateGUI();
         r = random.nextDouble(); //find next mode
     }
@@ -142,9 +143,21 @@ public class Algo {
     /**
      * Send the new position to the robot
      */
-    private static void updateRobot() {
-        //use position information from currentCell
-        //to move the robot
+    private static void updateRobot(int direction) {
+        int new_rewards = handler.moveRobot(currentCell.getArmRot(), currentCell.getRakeRot());
+        if(direction == 0){
+            prevCell.setRewardsUp(new_rewards);
+        }
+        else if(direction == 1){
+            prevCell.setRewardsDown(new_rewards);
+        }
+        else if(direction == 2){
+            prevCell.setRewardsLeft(new_rewards);
+        }
+        else if(direction == 3){
+            prevCell.setRewardsRight(new_rewards);
+        }
+        
     }
 
     /**
@@ -160,6 +173,9 @@ public class Algo {
             prevCell = currentCell;
             yVal = yVal + 1;
             currentCell = grid[xVal][yVal];
+            
+            updateRobot(0);
+            
             success = true;
         }
         return success;
@@ -171,6 +187,9 @@ public class Algo {
             prevCell = currentCell;
             yVal = yVal -1;
             currentCell = grid[xVal][yVal];
+            
+            updateRobot(1);
+            
             success = true;
         }
         return success;
@@ -182,6 +201,9 @@ public class Algo {
             prevCell = currentCell;
             xVal = xVal - 1;
             currentCell = grid[xVal][yVal];
+            
+            updateRobot(2);
+            
             success = true;
         }
         return success;
@@ -193,6 +215,9 @@ public class Algo {
             prevCell = currentCell;
             xVal = xVal + 1;
             currentCell = grid[xVal][yVal];
+            
+            updateRobot(3);
+            
             success = true;
         }
         return success;
