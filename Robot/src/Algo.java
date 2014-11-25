@@ -86,24 +86,29 @@ public class Algo {
             cell_list[1] = current_goodness + n * (findLargest(getCellRewards(grid[xVal-1][yVal])) - current_goodness);
         }
         if(yVal < 4){
-            cell_list[2] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal+1])) - current_goodness);
+            cell_list[2] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal-1])) - current_goodness);
         }
         if(yVal > 0){
-            cell_list[3] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal-1])) - current_goodness);
+            cell_list[3] = current_goodness + n * (findLargest(getCellRewards(grid[xVal][yVal+1])) - current_goodness);
         }
         
         int largest = findLargestDouble(cell_list);
+        
         if(largest == 0) {
-            moved = moveRight();
-        }
-        else if(largest == 1){
-            moved = moveLeft();
-        }
-        else if(largest == 2){
+            currentCell.setGoodness((int) cell_list[0]);
             moved = moveUp();
         }
-        else if(largest == 3){
+        else if(largest == 1){
+            currentCell.setGoodness((int) cell_list[1]);
             moved = moveDown();
+        }
+        else if(largest == 2){
+            currentCell.setGoodness((int) cell_list[2]);
+            moved = moveLeft();
+        }
+        else if(largest == 3){
+            currentCell.setGoodness((int) cell_list[3]);
+            moved = moveRight();
         }
         else
             explore();
