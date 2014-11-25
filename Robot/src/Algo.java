@@ -234,20 +234,28 @@ public class Algo {
             success = false;
         }
         return success;
-    }
-    
+    }    
     public static Cell getCurrentCell(){
         return currentCell;
     }
     public static Cell getPreviousCell(){
         return prevCell;
     }
-    
-    public static void clearGrid(){
+    private static void returnToZero(){
+        xVal = 0;
+        yVal = 0;
+        prevCell = currentCell;
+        currentCell = grid[xVal][yVal];
+    }
+    private static void clearGrid(){
         for(int i = 0; i < 5; i ++){
             for(int j = 0; j < 5; j++){
                 grid[i][j].clearCellValues();
             }
         }
+    }
+    public static void resetAlgo(){
+        returnToZero();
+        clearGrid();
     }
 }

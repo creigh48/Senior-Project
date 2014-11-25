@@ -22,6 +22,7 @@ public class Main {
     }
     
     public static void reset(){
+        Algo.resetAlgo();
         gui.updateCells(Algo.grid, Algo.getCurrentCell(), Algo.getPreviousCell());
     }
 }

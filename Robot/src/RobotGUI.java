@@ -7,22 +7,39 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.Timer;
 public class RobotGUI extends javax.swing.JFrame {
-    Timer timer;
+    Timer move_timer;
+    //add setters to make variable adjusted speed
+    private int move_time = 2000;
+    
+    Timer stopwatch;
     Cell[][] grid;
     Cell[] cells;
     int counter = 0;
+    
+    
+    int mins = 0;
+    int secs = 0;
+    int msecs = 0;
+    
     /**
      * Creates new form RobotGUI
      */
     public RobotGUI() {
         initComponents();
-            timer = new Timer(1500, new ActionListener() {
-            @Override
-            public void actionPerformed(ActionEvent e) {
-                move();          
+            move_timer = new Timer(move_time, new ActionListener() {
+                @Override
+                public void actionPerformed(ActionEvent e) {
+                    move();          
                 }
             });
-            timer.setInitialDelay(0);
+            move_timer.setInitialDelay(0);
+            
+            stopwatch = new Timer(100, new ActionListener(){
+                @Override
+                public void actionPerformed(ActionEvent e){
+                    updateStopwatch();
+                }
+            });
     }
 
     /**
@@ -90,6 +107,11 @@ public class RobotGUI extends javax.swing.JFrame {
         start_button = new javax.swing.JButton();
         stop_button = new javax.swing.JButton();
         reset_button = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        stopwatch_text = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        jButton1 = new javax.swing.JButton();
+        jButton2 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Reinforcement Learning");
@@ -276,34 +298,82 @@ public class RobotGUI extends javax.swing.JFrame {
             }
         });
 
+        jLabel1.setFont(new java.awt.Font("DejaVu Sans", 1, 14)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Time");
+
+        stopwatch_text.setEditable(false);
+        stopwatch_text.setFont(new java.awt.Font("DejaVu Sans", 0, 24)); // NOI18N
+        stopwatch_text.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        stopwatch_text.setText("00:00.0");
+
+        jLabel2.setFont(new java.awt.Font("DejaVu Sans", 1, 14)); // NOI18N
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel2.setText("Step Count");
+
+        jButton1.setText("Slow");
+        jButton1.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton1MouseClicked(evt);
+            }
+        });
+
+        jButton2.setText("Fast");
+        jButton2.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton2MouseClicked(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(step_counter, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
-                    .addComponent(start_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(stop_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(reset_button, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(stopwatch_text, javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                .addComponent(jLabel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(step_counter, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+                                .addComponent(start_button, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(stop_button, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(reset_button, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGap(0, 0, Short.MAX_VALUE))
+                        .addGroup(jPanel2Layout.createSequentialGroup()
+                            .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGap(33, 33, 33)
+                            .addComponent(jButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap())
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
                 .addContainerGap()
+                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(stopwatch_text, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(step_counter, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(start_button, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(stop_button)
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(reset_button)
-                .addContainerGap())
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jButton1)
+                    .addComponent(jButton2))
+                .addContainerGap(31, Short.MAX_VALUE))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {reset_button, start_button, stop_button});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {jButton1, jButton2, reset_button, start_button, stop_button});
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -379,6 +449,7 @@ public class RobotGUI extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -409,15 +480,14 @@ public class RobotGUI extends javax.swing.JFrame {
                                         .addComponent(jScrollPane19, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                                     .addComponent(jScrollPane20, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jScrollPane21, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jScrollPane18, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jScrollPane17, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane22, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane23, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane24, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(jScrollPane25, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -442,19 +512,30 @@ public class RobotGUI extends javax.swing.JFrame {
     boolean moving = false;
     private void start_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_start_buttonMouseClicked
         moving = true;
-        timer.start();
+        move_timer.start();
+        stopwatch.start();
     }//GEN-LAST:event_start_buttonMouseClicked
 
     private void stop_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_stop_buttonMouseClicked
         moving = false;
-        timer.stop();
+        move_timer.stop();
+        stopwatch.stop();
     }//GEN-LAST:event_stop_buttonMouseClicked
 
     private void reset_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_buttonMouseClicked
-        timer.stop();
+        move_timer.stop();
+        resetStopwatch();
         counter = 0;
         Main.reset();
     }//GEN-LAST:event_reset_buttonMouseClicked
+
+    private void jButton1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton1MouseClicked
+        slowPace();
+    }//GEN-LAST:event_jButton1MouseClicked
+
+    private void jButton2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton2MouseClicked
+        fastPace();
+    }//GEN-LAST:event_jButton2MouseClicked
 
     
     
@@ -463,6 +544,17 @@ public class RobotGUI extends javax.swing.JFrame {
             Main.startMoving();
         }
     }
+    
+    private void slowPace(){
+        move_time = 2000;
+    }
+    private void fastPace(){
+        move_time = 1500;
+    }
+    
+    
+    
+    
     /**
      * @param args the command line arguments
      */
@@ -496,6 +588,43 @@ public class RobotGUI extends javax.swing.JFrame {
                 new RobotGUI().setVisible(true);
             }
         });
+    }
+      
+    private void tick(){
+        msecs = msecs + 1;
+        if(msecs == 9) {
+            secs = secs + 1;
+            msecs = 0;
+        }
+        if(secs == 59) {
+            mins = mins + 1;
+            secs = 0;
+        }
+        
+    }
+    private void updateStopwatch(){
+        tick(); 
+        String minstring = "";
+        String secstring = "";;    
+        if(mins < 10) {
+            minstring = "0" + mins;
+        }else{
+            minstring = "" + mins;
+        }
+        
+        if(secs < 10) {
+            secstring = "0" + secs;
+        }else{
+            secstring = "" + secs;
+        }
+        
+        stopwatch_text.setText(minstring + ":" + secstring +"."+msecs);
+    }
+    private void resetStopwatch(){
+        msecs = 0;
+        secs = 0;
+        mins = 0;
+        stopwatch_text.setText("00:00.0");
     }
     
     /**
@@ -537,13 +666,14 @@ public class RobotGUI extends javax.swing.JFrame {
         cell15.setText(grid[4][2].toString());
         cell10.setText(grid[4][3].toString());
         cell5.setText(grid[4][4].toString());
+        highlightCurrent(currentCell);
         if(prevCell != null){
-            highlightCurrent(currentCell, prevCell);
+            highlightPrevious(prevCell);
         }
         counter = counter + 1;
     }
     
-    private void highlightCurrent(Cell currentCell, Cell previousCell){
+    private void highlightCurrent(Cell currentCell){
         if(currentCell == grid[0][0]){
             cell21.setBackground(Color.yellow);
         }else if(currentCell == grid[0][1]){
@@ -585,25 +715,23 @@ public class RobotGUI extends javax.swing.JFrame {
             cell14.setBackground(Color.yellow);
         }else if(currentCell == grid[3][3]){
             cell9.setBackground(Color.yellow);
-        }else if(currentCell == grid[3][3]){
+        }else if(currentCell == grid[3][4]){
             cell4.setBackground(Color.yellow);
             
-        }else if(currentCell == grid[3][4]){
-            cell25.setBackground(Color.yellow);
         }else if(currentCell == grid[4][0]){
-            cell20.setBackground(Color.yellow);
+            cell25.setBackground(Color.yellow);
         }else if(currentCell == grid[4][1]){
-            cell15.setBackground(Color.yellow);
+            cell20.setBackground(Color.yellow);
         }else if(currentCell == grid[4][2]){
-            cell10.setBackground(Color.yellow);
+            cell15.setBackground(Color.yellow);
         }else if(currentCell == grid[4][3]){
+            cell10.setBackground(Color.yellow);
+        }else if(currentCell == grid[4][4]){
             cell5.setBackground(Color.yellow);
         }     
-        highlightPrevious(previousCell);
     }
-    
-    
-        private void highlightPrevious(Cell prev){
+        
+    private void highlightPrevious(Cell prev){
         //Change the labels, copy the whole thing and repeat for previous cell
         if(prev == grid[0][0]){
             cell21.setBackground(Color.lightGray);
@@ -646,18 +774,18 @@ public class RobotGUI extends javax.swing.JFrame {
             cell14.setBackground(Color.lightGray);
         }else if(prev == grid[3][3]){
             cell9.setBackground(Color.lightGray);
-        }else if(prev == grid[3][3]){
+        }else if(prev == grid[3][4]){
             cell4.setBackground(Color.lightGray);
             
-        }else if(prev == grid[3][4]){
-            cell25.setBackground(Color.lightGray);
         }else if(prev == grid[4][0]){
-            cell20.setBackground(Color.lightGray);
+            cell25.setBackground(Color.lightGray);
         }else if(prev == grid[4][1]){
-            cell15.setBackground(Color.lightGray);
+            cell20.setBackground(Color.lightGray);
         }else if(prev == grid[4][2]){
-            cell10.setBackground(Color.lightGray);
+            cell15.setBackground(Color.lightGray);
         }else if(prev == grid[4][3]){
+            cell10.setBackground(Color.lightGray);
+        }else if(prev == grid[4][4]){
             cell5.setBackground(Color.lightGray);
         }
       
@@ -688,6 +816,10 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JTextPane cell7;
     private javax.swing.JTextPane cell8;
     private javax.swing.JTextPane cell9;
+    private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
@@ -719,5 +851,6 @@ public class RobotGUI extends javax.swing.JFrame {
     private javax.swing.JButton start_button;
     private javax.swing.JTextField step_counter;
     private javax.swing.JButton stop_button;
+    private javax.swing.JTextField stopwatch_text;
     // End of variables declaration//GEN-END:variables
 }
