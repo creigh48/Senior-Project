@@ -242,4 +242,12 @@ public class Algo {
     public static Cell getPreviousCell(){
         return prevCell;
     }
+    
+    public static void clearGrid(){
+        for(int i = 0; i < 5; i ++){
+            for(int j = 0; j < 5; j++){
+                grid[i][j].clearCellValues();
+            }
+        }
+    }
 }

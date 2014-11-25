@@ -452,6 +452,7 @@ public class RobotGUI extends javax.swing.JFrame {
 
     private void reset_buttonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_reset_buttonMouseClicked
         timer.stop();
+        counter = 0;
         Main.reset();
     }//GEN-LAST:event_reset_buttonMouseClicked
 
@@ -536,69 +537,131 @@ public class RobotGUI extends javax.swing.JFrame {
         cell15.setText(grid[4][2].toString());
         cell10.setText(grid[4][3].toString());
         cell5.setText(grid[4][4].toString());
-        
-        
+        if(prevCell != null){
+            highlightCurrent(currentCell, prevCell);
+        }
         counter = counter + 1;
     }
     
-    private void highlightCurrent(Cell currentCell){
-        //Change the labels, copy the whole thing and repeat for previous cell
+    private void highlightCurrent(Cell currentCell, Cell previousCell){
         if(currentCell == grid[0][0]){
             cell21.setBackground(Color.yellow);
         }else if(currentCell == grid[0][1]){
             cell16.setBackground(Color.yellow);
         }else if(currentCell == grid[0][2]){
-            cell16.setBackground(Color.yellow);
+            cell11.setBackground(Color.yellow);
         }else if(currentCell == grid[0][3]){
-            cell16.setBackground(Color.yellow);
+            cell6.setBackground(Color.yellow);
         }else if(currentCell == grid[0][4]){
-            cell16.setBackground(Color.yellow);
+            cell1.setBackground(Color.yellow);
+            
         }else if(currentCell == grid[1][0]){
-            cell16.setBackground(Color.yellow);
+            cell22.setBackground(Color.yellow);
         }else if(currentCell == grid[1][1]){
-            cell16.setBackground(Color.yellow);
+            cell17.setBackground(Color.yellow);
         }else if(currentCell == grid[1][2]){
-            cell16.setBackground(Color.yellow);
+            cell12.setBackground(Color.yellow);
         }else if(currentCell == grid[1][3]){
-            cell16.setBackground(Color.yellow);
+            cell7.setBackground(Color.yellow);
         }else if(currentCell == grid[1][4]){
-            cell16.setBackground(Color.yellow);
+            cell2.setBackground(Color.yellow);
+            
         }else if(currentCell == grid[2][0]){
-            cell16.setBackground(Color.yellow);
+            cell23.setBackground(Color.yellow);
         }else if(currentCell == grid[2][1]){
-            cell16.setBackground(Color.yellow);
+            cell18.setBackground(Color.yellow);
         }else if(currentCell == grid[2][2]){
-            cell16.setBackground(Color.yellow);
+            cell13.setBackground(Color.yellow);
         }else if(currentCell == grid[2][3]){
-            cell16.setBackground(Color.yellow);
+            cell8.setBackground(Color.yellow);
         }else if(currentCell == grid[2][4]){
-            cell16.setBackground(Color.yellow);
+            cell3.setBackground(Color.yellow);
+            
         }else if(currentCell == grid[3][0]){
-            cell16.setBackground(Color.yellow);
+            cell24.setBackground(Color.yellow);
         }else if(currentCell == grid[3][1]){
-            cell16.setBackground(Color.yellow);
+            cell19.setBackground(Color.yellow);
         }else if(currentCell == grid[3][2]){
-            cell16.setBackground(Color.yellow);
+            cell14.setBackground(Color.yellow);
         }else if(currentCell == grid[3][3]){
-            cell16.setBackground(Color.yellow);
+            cell9.setBackground(Color.yellow);
         }else if(currentCell == grid[3][3]){
-            cell16.setBackground(Color.yellow);
+            cell4.setBackground(Color.yellow);
+            
         }else if(currentCell == grid[3][4]){
-            cell16.setBackground(Color.yellow);
+            cell25.setBackground(Color.yellow);
         }else if(currentCell == grid[4][0]){
-            cell16.setBackground(Color.yellow);
+            cell20.setBackground(Color.yellow);
         }else if(currentCell == grid[4][1]){
-            cell16.setBackground(Color.yellow);
+            cell15.setBackground(Color.yellow);
         }else if(currentCell == grid[4][2]){
-            cell16.setBackground(Color.yellow);
+            cell10.setBackground(Color.yellow);
         }else if(currentCell == grid[4][3]){
-            cell16.setBackground(Color.yellow);
-        }else if(currentCell == grid[4][4]){
-            cell16.setBackground(Color.yellow);
+            cell5.setBackground(Color.yellow);
+        }     
+        highlightPrevious(previousCell);
+    }
+    
+    
+        private void highlightPrevious(Cell prev){
+        //Change the labels, copy the whole thing and repeat for previous cell
+        if(prev == grid[0][0]){
+            cell21.setBackground(Color.lightGray);
+        }else if(prev == grid[0][1]){
+            cell16.setBackground(Color.lightGray);
+        }else if(prev == grid[0][2]){
+            cell11.setBackground(Color.lightGray);
+        }else if(prev == grid[0][3]){
+            cell6.setBackground(Color.lightGray);
+        }else if(prev == grid[0][4]){
+            cell1.setBackground(Color.lightGray);
+            
+        }else if(prev == grid[1][0]){
+            cell22.setBackground(Color.lightGray);
+        }else if(prev == grid[1][1]){
+            cell17.setBackground(Color.lightGray);
+        }else if(prev == grid[1][2]){
+            cell12.setBackground(Color.lightGray);
+        }else if(prev == grid[1][3]){
+            cell7.setBackground(Color.lightGray);
+        }else if(prev == grid[1][4]){
+            cell2.setBackground(Color.lightGray);
+            
+        }else if(prev == grid[2][0]){
+            cell23.setBackground(Color.lightGray);
+        }else if(prev == grid[2][1]){
+            cell18.setBackground(Color.lightGray);
+        }else if(prev == grid[2][2]){
+            cell13.setBackground(Color.lightGray);
+        }else if(prev == grid[2][3]){
+            cell8.setBackground(Color.lightGray);
+        }else if(prev == grid[2][4]){
+            cell3.setBackground(Color.lightGray);
+            
+        }else if(prev == grid[3][0]){
+            cell24.setBackground(Color.lightGray);
+        }else if(prev == grid[3][1]){
+            cell19.setBackground(Color.lightGray);
+        }else if(prev == grid[3][2]){
+            cell14.setBackground(Color.lightGray);
+        }else if(prev == grid[3][3]){
+            cell9.setBackground(Color.lightGray);
+        }else if(prev == grid[3][3]){
+            cell4.setBackground(Color.lightGray);
+            
+        }else if(prev == grid[3][4]){
+            cell25.setBackground(Color.lightGray);
+        }else if(prev == grid[4][0]){
+            cell20.setBackground(Color.lightGray);
+        }else if(prev == grid[4][1]){
+            cell15.setBackground(Color.lightGray);
+        }else if(prev == grid[4][2]){
+            cell10.setBackground(Color.lightGray);
+        }else if(prev == grid[4][3]){
+            cell5.setBackground(Color.lightGray);
         }
       
     }
-    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTextPane cell1;
     private javax.swing.JTextPane cell10;

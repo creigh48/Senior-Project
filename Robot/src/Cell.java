@@ -65,6 +65,13 @@ public class Cell {
     public void setRewardsRight(int newRewards) {
     	rewardsRight = newRewards;
     }
+    public void clearCellValues(){
+        this.setRewardsLeft(0);
+        this.setRewardsRight(0);
+        this.setRewardsUp(0);
+        this.setRewardsDown(0);
+        this.setGoodness(0);
+    }
     public String toString(){
         String str ="          " + getrewardsUp() + "\n\n" 
                 + getrewardsLeft() + "                  " +getrewardsRight()+ "\n\n" 
