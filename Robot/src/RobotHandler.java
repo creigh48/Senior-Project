@@ -18,5 +18,8 @@ public class RobotHandler {
         //assign distance_traveled to the tachometer 
         return distance_traveled;
     }
+    public void disconnect(){
+        //put disconnection code here
+    }
           
 }

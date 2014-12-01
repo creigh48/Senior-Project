@@ -257,5 +257,6 @@ public class Algo {
     public static void resetAlgo(){
         returnToZero();
         clearGrid();
+        
     }
 }
