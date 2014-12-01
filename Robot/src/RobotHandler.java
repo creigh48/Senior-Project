@@ -1,6 +1,7 @@
 /**
  *
  * @author Jeffrey Creighton
+ * This class will act as the communications link between the computer and the robot.
  */
 import java.util.Random;
 public class RobotHandler {
